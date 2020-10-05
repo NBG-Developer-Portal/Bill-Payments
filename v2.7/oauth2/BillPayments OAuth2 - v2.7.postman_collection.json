@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "384f5a9e-f2b3-4663-8475-7417233ae891",
+		"_postman_id": "4b8bdc8c-13f9-4751-9875-5b07356bfce9",
 		"name": "BillPayments OAuth2 - v2.7",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -19,7 +19,7 @@
 									"tests[\"response is empty\"] = responseBody === \"\";",
 									"tests[\"Status code is 204\"] = responseCode.code === 204;"
 								],
-								"id": "ea0da65a-378f-4964-8aaa-3969099834df"
+								"id": "ef5ae5a8-0445-4c18-8f29-a998c62ff482"
 							}
 						}
 					],
@@ -39,10 +39,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}"
 							]
@@ -66,7 +66,7 @@
 									"postman.setEnvironmentVariable(\"user_id1\", jsonData.payload.users[0].userId);",
 									"postman.setEnvironmentVariable(\"username1\", jsonData.payload.users[0].userName);"
 								],
-								"id": "6cbadf1c-e710-4066-86ca-aaecdf85c4ed"
+								"id": "0951112b-903e-444f-a70d-83ce605db2b0"
 							}
 						}
 					],
@@ -90,10 +90,10 @@
 							"raw": "https://{{root_url}}/sandbox",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox"
 							]
 						}
@@ -106,14 +106,14 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "f1ff7577-31f5-49bc-9fe3-a7d81c2ab794",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
 									"tests[\"payload not empty\"] = jsonData.payload !== null;",
 									"tests[\"exception is empty\"] = jsonData.exception === null;"
 								],
-								"id": "b7d1d43a-5235-44d7-b880-3b59d4933683"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -131,16 +131,21 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"sandboxID\": \"{{sandbox_id}}\",\n        \"users\": [\n            {\n                \"userId\": \"e6da8f9cee8b488c91790a566e9d8aed\",\n                \"userName\": \"User1\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"IBANK_USER\",\n                \"spotMachineID\": \"e0c3cfc6db41432a8fa5dbb230dbcfed\",\n                \"userAccounts\": [\n                    {\n                        \"accountId\": \"d3bbdc30741e4beea5cceff8ac4982f7\",\n                        \"balance\": 100000,\n                        \"accountType\": \"IBAN\",\n                        \"accountTypeValue\": \"GR8979540708770489\"\n                    }\n                ]\n            },\n            {\n                \"userId\": \"acd77e31a63748b6a070ffc5d1d68e63\",\n                \"userName\": \"User2\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"IBANK_USER\",\n                \"spotMachineID\": null,\n                \"userAccounts\": [\n                    {\n                        \"accountId\": \"e146dde9663c47ea8322afda2c2aa907\",\n                        \"balance\": 100000,\n                        \"accountType\": \"IBAN\",\n                        \"accountTypeValue\": \"GR7816570557954408\"\n                    }\n                ]\n            },\n            {\n                \"userId\": \"1eba60ac62d84feabd6740af173d7e1f\",\n                \"userName\": \"MEDIATOR_USER1\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"MEDIATOR\",\n                \"spotMachineID\": \"c850e76e6ea745b4af18742ef516944b\",\n                \"userAccounts\": []\n            },\n            {\n                \"userId\": \"e302d3fbd53f4f55a2cfde4d0611191c\",\n                \"userName\": \"MEDIATOR_MACHINE_USER1\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"MEDIATOR\",\n                \"spotMachineID\": \"cae44dde2e0d45aa8c4571f0a36ee3e7\",\n                \"userAccounts\": [\n                    {\n                        \"accountId\": \"a222de0fc80342e68e0ae7ca76c2c552\",\n                        \"balance\": 100000,\n                        \"accountType\": \"IBAN\",\n                        \"accountTypeValue\": \"GR2539560718447876\"\n                    }\n                ]\n            },\n            {\n                \"userId\": \"177814defa114d8999fb3343cbe01d98\",\n                \"userName\": \"MEDIATOR_MACHINE_USER2\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"MACHINE\",\n                \"spotMachineID\": \"ed833e5affcd46cfaa0c0ad527ea1c5b\",\n                \"userAccounts\": [\n                    {\n                        \"accountId\": \"8359dd7caa7142f1a7e7df8aa18f7ebe\",\n                        \"balance\": 100000,\n                        \"accountType\": \"IBAN\",\n                        \"accountTypeValue\": \"GR5579486657194533\"\n                    }\n                ]\n            },\n            {\n                \"userId\": \"d7fdc5579088431aa3f2e78444b90f46\",\n                \"userName\": \"MACHINE_USER1\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"MACHINE\",\n                \"spotMachineID\": \"0e9ee31ea10447aeb69f609a2391d610\",\n                \"userAccounts\": [\n                    {\n                        \"accountId\": \"1228b2d0961a462485ec960665a2e235\",\n                        \"balance\": 100000,\n                        \"accountType\": \"IBAN\",\n                        \"accountTypeValue\": \"GR7709480620146655\"\n                    }\n                ]\n            },\n            {\n                \"userId\": \"4547cfbdbffd4e1e83ecd50dd16d7792\",\n                \"userName\": \"MACHINE_USER2\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\",\n                \"userType\": \"MACHINE\",\n                \"spotMachineID\": \"8e18d9e33f5f4957a689708b58d4ffcd\",\n                \"userAccounts\": [\n                    {\n                        \"accountId\": \"48897307224745148ace1e2fbd2e17b3\",\n                        \"balance\": 100000,\n                        \"accountType\": \"IBAN\",\n                        \"accountTypeValue\": \"GR775496558894651\"\n                    }\n                ]\n            }\n        ],\n        \"networks\": [\n            {\n                \"id\": \"13f1a6dc61dd4856bbc878c935c4e577\",\n                \"name\": \"TPP4USERS_NETWORK\",\n                \"commercialName\": \"TPP4USERS_NETWORK\",\n                \"paymentChannel\": \"ed5622df908f424c9e4bcaef32e48cf1\",\n                \"ownerIBUserId\": \"e6da8f9cee8b488c91790a566e9d8aed\",\n                \"startDate\": \"20180111T11:47:55.321Z\",\n                \"endDate\": \"20190111T11:47:55.321Z\",\n                \"networkMetadata\": [\n                    {\n                        \"id\": \"ab593dbe01ac4d9a8eedab7eb9fc20c7\",\n                        \"fieldKey\": \"IS_CANCEL_ADMIN_ALLOWED\",\n                        \"fieldValue\": \"FALSE\"\n                    },\n                    {\n                        \"id\": \"de1cecc779364739a476b13c2a6c6920\",\n                        \"fieldKey\": \"CANCELLATION_WITH_REPAY\",\n                        \"fieldValue\": \"FALSE\"\n                    },\n                    {\n                        \"id\": \"fec2eb8aca044c1b9330946a9959b2d9\",\n                        \"fieldKey\": \"MODE\",\n                        \"fieldValue\": \"TPP4USERS\"\n                    },\n                    {\n                        \"id\": \"bb41c9681c4b4083a3f782913dbb9c51\",\n                        \"fieldKey\": \"MAX_CANCELLATION_PERC\",\n                        \"fieldValue\": \"0\"\n                    },\n                    {\n                        \"id\": \"67affbe8026f41acb13b4b2a1d0f10cf\",\n                        \"fieldKey\": \"TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE\",\n                        \"fieldValue\": \"DEFAULT\"\n                    },\n                    {\n                        \"id\": \"9731c16637334d3aa0af35ad48d1bfc4\",\n                        \"fieldKey\": \"MIN_CANCELLATION_PERC\",\n                        \"fieldValue\": \"0\"\n                    }\n                ],\n                \"networkAccounts\": [\n                    {\n                        \"id\": \"8a82af3225df48b8b29e79d1cb37b5df\",\n                        \"IBANorBBAN\": \"GR5983850494884574\",\n                        \"PAN\": null,\n                        \"accountType\": \"ULTDEBTOR_INTERACCOUNT\"\n                    }\n                ],\n                \"networkLimits\": [],\n                \"networkMessages\": [],\n                \"spots\": [\n                    {\n                        \"id\": \"5d5264d127c5416e88b4f79f046d1d4a\",\n                        \"name\": \"DemoKiosk1\",\n                        \"comments\": null,\n                        \"address\": \"Γαργγητού 99\",\n                        \"startDate\": \"20180111T11:47:55.321Z\",\n                        \"endDate\": \"20190111T11:47:55.321Z\",\n                        \"ownerIBUserId\": \"e6da8f9cee8b488c91790a566e9d8aed\",\n                        \"ssn\": \"D16H1PKMSP\",\n                        \"status\": \"ENABLED\",\n                        \"authorizationUpdateLvl\": \"NETWORK\",\n                        \"spotMachines\": [\n                            {\n                                \"id\": \"e0c3cfc6db41432a8fa5dbb230dbcfed\",\n                                \"machineId\": \"DemoSpotMachine1\",\n                                \"serialNo\": \"\",\n                                \"machineType\": \"TransactionTerminal\",\n                                \"description\": \"DemoSpotMachine1\",\n                                \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                                \"installedDate\": \"20180111T11:47:55.321Z\",\n                                \"startDate\": \"20180111T11:47:55.321Z\",\n                                \"endDate\": \"20190111T11:47:55.321Z\",\n                                \"status\": \"ENABLED\",\n                                \"authorizationUpdateLvl\": null,\n                                \"store\": \"\",\n                                \"spotMachineOTTs\": [],\n                                \"spotMachineTransactions\": [\n                                    {\n                                        \"id\": \"9cb93365b498403dae2edfe788e25b71\",\n                                        \"txId\": \"a76b579ded504d2ba053628247140593\",\n                                        \"instrId\": \"384507931d684a60bed1313538a1bb01\",\n                                        \"endToEndId\": \"90773001121420176229\",\n                                        \"paymentCode\": \"69d6ffc8cc654130a172d2fa16b6cbe8\",\n                                        \"ccy\": \"EUR\",\n                                        \"amount\": 17,\n                                        \"method\": \"ACCT\",\n                                        \"creditorBankBIC\": \"ETHNGRAA\",\n                                        \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                        \"creditorBankIBAN\": \"GR41498760953239760\",\n                                        \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                        \"debtorTelephone\": \"2101234567\",\n                                        \"paymentType\": \"NBG\",\n                                        \"debitAccount\": \"GR7816570557954408\",\n                                        \"branch\": \"001\",\n                                        \"userId\": \"acd77e31a63748b6a070ffc5d1d68e63\",\n                                        \"sendCutOffTime\": \"20180111T14:00:00.000Z\",\n                                        \"commNBG\": 0.2,\n                                        \"commUltimateDebtor\": 0.1,\n                                        \"commThirdParty\": 0.4,\n                                        \"commOther\": 0,\n                                        \"clearSysRef\": \"90773001121420176229\",\n                                        \"status\": \"COMPLETED\",\n                                        \"failureReason\": null,\n                                        \"timestamp\": \"20180111T11:47:55.321Z\",\n                                        \"subBranch\": \"01\",\n                                        \"impersonator\": null,\n                                        \"commSubAgent\": 0.03,\n                                        \"spotMachineTransactionDetails\": [\n                                            {\n                                                \"fieldKey\": \"PAYMENT_CODE\",\n                                                \"fieldValue\": \"90773\"\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"id\": \"d331191fbc9242d9be9a6f9173e7d9a3\",\n                                        \"txId\": \"e4f4b937f26640239320b4bafe1857b3\",\n                                        \"instrId\": \"cab46a91b8b94f63bc9d261b16ee7b3a\",\n                                        \"endToEndId\": \"90773001121420171285\",\n                                        \"paymentCode\": \"58f02321441c4c9587a2295092851534\",\n                                        \"ccy\": \"EUR\",\n                                        \"amount\": 53,\n                                        \"method\": \"CASH\",\n                                        \"creditorBankBIC\": \"ETHNGRAA\",\n                                        \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                        \"creditorBankIBAN\": \"GR41498760953239760\",\n                                        \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                        \"debtorTelephone\": \"2101234567\",\n                                        \"paymentType\": \"NBG\",\n                                        \"debitAccount\": \"GR7816570557954408\",\n                                        \"branch\": \"001\",\n                                        \"userId\": \"acd77e31a63748b6a070ffc5d1d68e63\",\n                                        \"sendCutOffTime\": \"20180111T14:00:00.000Z\",\n                                        \"commNBG\": 0.2,\n                                        \"commUltimateDebtor\": 0.1,\n                                        \"commThirdParty\": 0.4,\n                                        \"commOther\": 0,\n                                        \"clearSysRef\": \"90773001121420171285\",\n                                        \"status\": \"COMPLETED\",\n                                        \"failureReason\": null,\n                                        \"timestamp\": \"20180111T11:47:55.321Z\",\n                                        \"subBranch\": \"01\",\n                                        \"impersonator\": null,\n                                        \"commSubAgent\": 0.03,\n                                        \"spotMachineTransactionDetails\": [\n                                            {\n                                                \"fieldKey\": \"PAYMENT_CODE\",\n                                                \"fieldValue\": \"90773\"\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"spotMachineAccounts\": [\n                                    {\n                                        \"id\": \"d3bbdc30741e4beea5cceff8ac4982f7\",\n                                        \"IBANorBBAN\": \"GR8979540708770489\",\n                                        \"PAN\": null\n                                    }\n                                ],\n                                \"spotMachinePaymentCodeExceptions\": [],\n                                \"spotMachineNetworkLimits\": [\n                                    {\n                                        \"id\": \"b98e0f042660463fb97f146ac93bd256\",\n                                        \"limitType\": \"REVERSAL\",\n                                        \"limitScope\": \"SPOT_MACHINE\",\n                                        \"interval\": 5,\n                                        \"maxCount\": 1000,\n                                        \"maxAmount\": 1000000,\n                                        \"startDate\": \"20180111T11:47:55.321Z\",\n                                        \"endDate\": \"21180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineNetworkMessage\": [\n                                    {\n                                        \"id\": \"0386c1440c014f28b3da1a3d9bf68274\",\n                                        \"category\": \"WELCOME\",\n                                        \"content\": \"Welcome to our network!\",\n                                        \"contentType\": \"Content Type\",\n                                        \"bitmapContent\": null,\n                                        \"endDate\": \"21180111T11:47:55.321Z\",\n                                        \"startDate\": \"20180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineLocation\": {\n                                    \"id\": \"6c3230927540408fad6d9d9d2fafc365\",\n                                    \"latitude\": \"47.65100\",\n                                    \"longitude\": \"122.34900\",\n                                    \"coordinatesSystem\": \"DECIMAL\",\n                                    \"address\": null\n                                }\n                            }\n                        ],\n                        \"spotPaymentCodeExceptions\": [],\n                        \"spotNetworkLimits\": [],\n                        \"spotNetworkMessages\": []\n                    }\n                ]\n            },\n            {\n                \"id\": \"b736c46255534c5e81e4bcad5853090c\",\n                \"name\": \"DEMO_DECENTRALIZED_NETWORK\",\n                \"commercialName\": \"DEMO_DECENTRALIZED_NETWORK\",\n                \"paymentChannel\": \"475f5b9ad6074a46a8841bdc9edbfb06\",\n                \"ownerIBUserId\": \"d7fdc5579088431aa3f2e78444b90f46\",\n                \"startDate\": \"20180111T11:47:55.321Z\",\n                \"endDate\": \"20190111T11:47:55.321Z\",\n                \"networkMetadata\": [\n                    {\n                        \"id\": \"ab593dbe01ac4d9a8eedab7eb9fc20c7\",\n                        \"fieldKey\": \"IS_CANCEL_ADMIN_ALLOWED\",\n                        \"fieldValue\": \"TRUE\"\n                    },\n                    {\n                        \"id\": \"de1cecc779364739a476b13c2a6c6920\",\n                        \"fieldKey\": \"CANCELLATION_WITH_REPAY\",\n                        \"fieldValue\": \"FALSE\"\n                    },\n                    {\n                        \"id\": \"fec2eb8aca044c1b9330946a9959b2d9\",\n                        \"fieldKey\": \"MODE\",\n                        \"fieldValue\": \"DECENTRALIZED\"\n                    },\n                    {\n                        \"id\": \"bb41c9681c4b4083a3f782913dbb9c51\",\n                        \"fieldKey\": \"MAX_CANCELLATION_PERC\",\n                        \"fieldValue\": \"120\"\n                    },\n                    {\n                        \"id\": \"67affbe8026f41acb13b4b2a1d0f10cf\",\n                        \"fieldKey\": \"TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE\",\n                        \"fieldValue\": \"DEFAULT\"\n                    },\n                    {\n                        \"id\": \"9731c16637334d3aa0af35ad48d1bfc4\",\n                        \"fieldKey\": \"MIN_CANCELLATION_PERC\",\n                        \"fieldValue\": \"25\"\n                    }\n                ],\n                \"networkAccounts\": [\n                    {\n                        \"id\": \"f942e391afbc49f6ac4bc17a085b866e\",\n                        \"IBANorBBAN\": \"GR9746980283764142\",\n                        \"PAN\": null,\n                        \"accountType\": \"ULTDEBTOR_INTERACCOUNT\"\n                    }\n                ],\n                \"networkLimits\": [],\n                \"networkMessages\": [],\n                \"spots\": [\n                    {\n                        \"id\": \"e32560a4192e44209fca62cabd12007f\",\n                        \"name\": \"DemoDecentralizedSpot1\",\n                        \"comments\": null,\n                        \"address\": \"Γαργγητού 99\",\n                        \"startDate\": \"20180111T11:47:55.321Z\",\n                        \"endDate\": \"20190111T11:47:55.321Z\",\n                        \"ownerIBUserId\": \"d7fdc5579088431aa3f2e78444b90f46\",\n                        \"ssn\": \"OO4UVVYDDU\",\n                        \"status\": \"ENABLED\",\n                        \"authorizationUpdateLvl\": \"NETWORK\",\n                        \"spotMachines\": [\n                            {\n                                \"id\": \"0e9ee31ea10447aeb69f609a2391d610\",\n                                \"machineId\": \"DemoDecentralizedSpotMachine1\",\n                                \"serialNo\": \"\",\n                                \"machineType\": \"TransactionTerminal\",\n                                \"description\": \"DemoDecentralizedSpotMachine1\",\n                                \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                                \"installedDate\": \"20180111T11:47:55.321Z\",\n                                \"startDate\": \"20180111T11:47:55.321Z\",\n                                \"endDate\": \"20190111T11:47:55.321Z\",\n                                \"status\": \"ENABLED\",\n                                \"authorizationUpdateLvl\": null,\n                                \"store\": \"\",\n                                \"spotMachineOTTs\": [],\n                                \"spotMachineTransactions\": [\n                                    {\n                                        \"id\": \"5838ce85919347e29e1f9befd0ade73b\",\n                                        \"txId\": \"1329aa5dce354d5b933449d6b586e7bb\",\n                                        \"instrId\": \"E93F0F84AA39470FBF7C22725271C4AF\",\n                                        \"endToEndId\": \"90773001121420176229\",\n                                        \"paymentCode\": \"69d6ffc8cc654130a172d2fa16b6cbe8\",\n                                        \"ccy\": \"EUR\",\n                                        \"amount\": 17,\n                                        \"method\": \"CASH\",\n                                        \"creditorBankBIC\": \"ETHNGRAA\",\n                                        \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                        \"creditorBankIBAN\": \"GR41498760953239760\",\n                                        \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                        \"debtorTelephone\": \"2101234567\",\n                                        \"paymentType\": \"NBG\",\n                                        \"debitAccount\": \"GR7816570557954408\",\n                                        \"branch\": \"001\",\n                                        \"userId\": \"d7fdc5579088431aa3f2e78444b90f46\",\n                                        \"sendCutOffTime\": \"20180111T14:00:00.000Z\",\n                                        \"commNBG\": 0.2,\n                                        \"commUltimateDebtor\": 0.1,\n                                        \"commThirdParty\": 0.4,\n                                        \"commOther\": 0,\n                                        \"clearSysRef\": \"90773001121420176229\",\n                                        \"status\": \"COMPLETED\",\n                                        \"failureReason\": null,\n                                        \"timestamp\": \"20180110T22:00:00.000Z\",\n                                        \"subBranch\": \"01\",\n                                        \"impersonator\": null,\n                                        \"commSubAgent\": 0.03,\n                                        \"spotMachineTransactionDetails\": [\n                                            {\n                                                \"fieldKey\": \"PAYMENT_CODE\",\n                                                \"fieldValue\": \"90773\"\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"id\": \"3676232bde2e49428ea2e9e04ba8aceb\",\n                                        \"txId\": \"3263f9792fe14c9c9dd94dd5db0ea866\",\n                                        \"instrId\": \"BBCA19FF9663495AB3B10395F7A8AA4C\",\n                                        \"endToEndId\": \"90773001121420171285\",\n                                        \"paymentCode\": \"58f02321441c4c9587a2295092851534\",\n                                        \"ccy\": \"EUR\",\n                                        \"amount\": 53,\n                                        \"method\": \"CASH\",\n                                        \"creditorBankBIC\": \"ETHNGRAA\",\n                                        \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                        \"creditorBankIBAN\": \"GR41498760953239760\",\n                                        \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                        \"debtorTelephone\": \"2101234567\",\n                                        \"paymentType\": \"NBG\",\n                                        \"debitAccount\": \"GR7816570557954408\",\n                                        \"branch\": \"001\",\n                                        \"userId\": \"d7fdc5579088431aa3f2e78444b90f46\",\n                                        \"sendCutOffTime\": \"20180111T14:00:00.000Z\",\n                                        \"commNBG\": 0.2,\n                                        \"commUltimateDebtor\": 0.1,\n                                        \"commThirdParty\": 0.4,\n                                        \"commOther\": 0,\n                                        \"clearSysRef\": \"90773001121420171285\",\n                                        \"status\": \"COMPLETED\",\n                                        \"failureReason\": null,\n                                        \"timestamp\": \"20180111T11:47:55.321Z\",\n                                        \"subBranch\": \"01\",\n                                        \"impersonator\": null,\n                                        \"commSubAgent\": 0.03,\n                                        \"spotMachineTransactionDetails\": [\n                                            {\n                                                \"fieldKey\": \"PAYMENT_CODE\",\n                                                \"fieldValue\": \"90773\"\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"spotMachineAccounts\": [\n                                    {\n                                        \"id\": \"1228b2d0961a462485ec960665a2e235\",\n                                        \"IBANorBBAN\": \"GR7709480620146655\",\n                                        \"PAN\": null\n                                    }\n                                ],\n                                \"spotMachinePaymentCodeExceptions\": [],\n                                \"spotMachineNetworkLimits\": [\n                                    {\n                                        \"id\": \"a8f9275c2ec543349bfb01b1a41e42f3\",\n                                        \"limitType\": \"REVERSAL\",\n                                        \"limitScope\": \"SPOT_MACHINE\",\n                                        \"interval\": 5,\n                                        \"maxCount\": 1000,\n                                        \"maxAmount\": 1000000,\n                                        \"startDate\": \"20180111T11:47:55.321Z\",\n                                        \"endDate\": \"21180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineNetworkMessage\": [\n                                    {\n                                        \"id\": \"f233b8806f1f461e8006346ce0a8686f\",\n                                        \"category\": \"WELCOME\",\n                                        \"content\": \"Welcome to our network!\",\n                                        \"contentType\": \"Content Type\",\n                                        \"bitmapContent\": null,\n                                        \"endDate\": \"21180111T11:47:55.321Z\",\n                                        \"startDate\": \"20180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineLocation\": {\n                                    \"id\": \"8d48bdc4b88145c1b0c6f583c3bc6b9f\",\n                                    \"latitude\": \"47.65100\",\n                                    \"longitude\": \"122.34900\",\n                                    \"coordinatesSystem\": \"DECIMAL\",\n                                    \"address\": null\n                                }\n                            },\n                            {\n                                \"id\": \"8e18d9e33f5f4957a689708b58d4ffcd\",\n                                \"machineId\": \"DemoDecentralizedSpotNetworkAdministrationMachine1\",\n                                \"serialNo\": \"\",\n                                \"machineType\": \"NetworkAdministrationTerminal\",\n                                \"description\": \"DemoDecentralizedSpotNetworkAdministrationMachine1\",\n                                \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                                \"installedDate\": \"20180111T11:47:55.321Z\",\n                                \"startDate\": \"20180111T11:47:55.321Z\",\n                                \"endDate\": \"20190111T11:47:55.321Z\",\n                                \"status\": \"ENABLED\",\n                                \"authorizationUpdateLvl\": null,\n                                \"store\": \"\",\n                                \"spotMachineOTTs\": [],\n                                \"spotMachineTransactions\": [],\n                                \"spotMachineAccounts\": [\n                                    {\n                                        \"id\": \"48897307224745148ace1e2fbd2e17b3\",\n                                        \"IBANorBBAN\": \"GR775496558894651\",\n                                        \"PAN\": null\n                                    }\n                                ],\n                                \"spotMachinePaymentCodeExceptions\": [],\n                                \"spotMachineNetworkLimits\": [\n                                    {\n                                        \"id\": \"befd8d08cb914d65a0c99c2c5bf76b87\",\n                                        \"limitType\": \"REVERSAL\",\n                                        \"limitScope\": \"SPOT_MACHINE\",\n                                        \"interval\": 5,\n                                        \"maxCount\": 1000,\n                                        \"maxAmount\": 1000000,\n                                        \"startDate\": \"20180111T11:47:55.321Z\",\n                                        \"endDate\": \"21180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineNetworkMessage\": [\n                                    {\n                                        \"id\": \"1a5b3b9ffdb94e66bb933ca8970f09c2\",\n                                        \"category\": \"WELCOME\",\n                                        \"content\": \"Welcome to our network!\",\n                                        \"contentType\": \"Content Type\",\n                                        \"bitmapContent\": null,\n                                        \"endDate\": \"21180111T11:47:55.321Z\",\n                                        \"startDate\": \"20180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineLocation\": {\n                                    \"id\": \"9ef22719713a45da875db3321efde76b\",\n                                    \"latitude\": \"47.65100\",\n                                    \"longitude\": \"122.34900\",\n                                    \"coordinatesSystem\": \"DECIMAL\",\n                                    \"address\": null\n                                }\n                            }\n                        ],\n                        \"spotPaymentCodeExceptions\": [],\n                        \"spotNetworkLimits\": [],\n                        \"spotNetworkMessages\": []\n                    }\n                ]\n            },\n            {\n                \"id\": \"8133eda9e71544979395f7721b004292\",\n                \"name\": \"DEMO_CENTRALIZED_NETWORK\",\n                \"commercialName\": \"DEMO_CENTRALIZED_NETWORK\",\n                \"paymentChannel\": \"d141ee4e6062419a84953cdfcb13b409\",\n                \"ownerIBUserId\": \"1eba60ac62d84feabd6740af173d7e1f\",\n                \"startDate\": \"20180111T11:47:55.321Z\",\n                \"endDate\": \"20190111T11:47:55.321Z\",\n                \"networkMetadata\": [\n                    {\n                        \"id\": \"97013e64ec6340748c0164dc9a1dc369\",\n                        \"fieldKey\": \"IS_CANCEL_ADMIN_ALLOWED\",\n                        \"fieldValue\": \"FALSE\"\n                    },\n                    {\n                        \"id\": \"0e35a932e2e04a0d9ae07bcd26bbb6e5\",\n                        \"fieldKey\": \"CANCELLATION_WITH_REPAY\",\n                        \"fieldValue\": \"FALSE\"\n                    },\n                    {\n                        \"id\": \"f7fe8cb0f64f448d8e1e637cb8bfa8cb\",\n                        \"fieldKey\": \"MODE\",\n                        \"fieldValue\": \"CENTRALIZED\"\n                    },\n                    {\n                        \"id\": \"825162c7590e480d9ea7bd13bcac7190\",\n                        \"fieldKey\": \"MAX_CANCELLATION_PERC\",\n                        \"fieldValue\": \"0\"\n                    },\n                    {\n                        \"id\": \"0b8fce93c20f486e80a40a4b1a4f2fba\",\n                        \"fieldKey\": \"TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE\",\n                        \"fieldValue\": \"DEFAULT\"\n                    },\n                    {\n                        \"id\": \"6aa0e60a05ba4215bf3469135d50d81e\",\n                        \"fieldKey\": \"MIN_CANCELLATION_PERC\",\n                        \"fieldValue\": \"0\"\n                    }\n                ],\n                \"networkAccounts\": [\n                    {\n                        \"id\": \"496e136b34484544bb4261aa64cc4e88\",\n                        \"IBANorBBAN\": \"GR0630590502161789\",\n                        \"PAN\": null,\n                        \"accountType\": \"ULTDEBTOR_INTERACCOUNT\"\n                    }\n                ],\n                \"networkLimits\": [],\n                \"networkMessages\": [],\n                \"spots\": [\n                    {\n                        \"id\": \"1de1fac3aa11484ebb75b59b951a93cd\",\n                        \"name\": \"DemoCentralizedSpot1\",\n                        \"comments\": null,\n                        \"address\": \"Γαργγητού 99\",\n                        \"startDate\": \"20180111T11:47:55.321Z\",\n                        \"endDate\": \"20190111T11:47:55.321Z\",\n                        \"ownerIBUserId\": \"1eba60ac62d84feabd6740af173d7e1f\",\n                        \"ssn\": \"9PAUPTQIKK\",\n                        \"status\": \"ENABLED\",\n                        \"authorizationUpdateLvl\": \"NETWORK\",\n                        \"spotMachines\": [\n                            {\n                                \"id\": \"c850e76e6ea745b4af18742ef516944b\",\n                                \"machineId\": \"DemoCentralizedMediatorSpotMachine1\",\n                                \"serialNo\": \"\",\n                                \"machineType\": \"Mediator\",\n                                \"description\": \"DemoCentralizedMediatorSpotMachine1\",\n                                \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                                \"installedDate\": \"20180111T11:47:55.321Z\",\n                                \"startDate\": \"20180111T11:47:55.321Z\",\n                                \"endDate\": \"20190111T11:47:55.321Z\",\n                                \"status\": \"ENABLED\",\n                                \"authorizationUpdateLvl\": null,\n                                \"store\": \"\",\n                                \"spotMachineOTTs\": [],\n                                \"spotMachineTransactions\": [],\n                                \"spotMachineAccounts\": null,\n                                \"spotMachinePaymentCodeExceptions\": [],\n                                \"spotMachineNetworkLimits\": [\n                                    {\n                                        \"id\": \"16d0bb591f9b41a4b1ea9294e7927425\",\n                                        \"limitType\": \"REVERSAL\",\n                                        \"limitScope\": \"SPOT_MACHINE\",\n                                        \"interval\": 5,\n                                        \"maxCount\": 1000,\n                                        \"maxAmount\": 1000000,\n                                        \"startDate\": \"20180111T11:47:55.321Z\",\n                                        \"endDate\": \"21180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineNetworkMessage\": [\n                                    {\n                                        \"id\": \"4d34b875608c4b36b2049090532ca047\",\n                                        \"category\": \"WELCOME\",\n                                        \"content\": \"Welcome to our network!\",\n                                        \"contentType\": \"Content Type\",\n                                        \"bitmapContent\": null,\n                                        \"endDate\": \"21180111T11:47:55.321Z\",\n                                        \"startDate\": \"20180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineLocation\": {\n                                    \"id\": \"ada8553ead9a4178913ae45c2714cc45\",\n                                    \"latitude\": \"47.65100\",\n                                    \"longitude\": \"122.34900\",\n                                    \"coordinatesSystem\": \"DECIMAL\",\n                                    \"address\": null\n                                }\n                            },\n                            {\n                                \"id\": \"cae44dde2e0d45aa8c4571f0a36ee3e7\",\n                                \"machineId\": \"DemoCentralizedSpotMachine1\",\n                                \"serialNo\": \"\",\n                                \"machineType\": \"TransactionTerminal\",\n                                \"description\": \"DemoCentralizedSpotMachine1\",\n                                \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                                \"installedDate\": \"20180111T11:47:55.321Z\",\n                                \"startDate\": \"20180111T11:47:55.321Z\",\n                                \"endDate\": \"20190111T11:47:55.321Z\",\n                                \"status\": \"ENABLED\",\n                                \"authorizationUpdateLvl\": null,\n                                \"store\": \"\",\n                                \"spotMachineOTTs\": [],\n                                \"spotMachineTransactions\": [\n                                    {\n                                        \"id\": \"82c01e5fc2c54e8caa1583fc7ab14480\",\n                                        \"txId\": \"b41d665cef69487d93b00de978a1295a\",\n                                        \"instrId\": \"21CA8C794D2540E9AC6D90AF2D263E6A\",\n                                        \"endToEndId\": \"90773001121420176229\",\n                                        \"paymentCode\": \"69d6ffc8cc654130a172d2fa16b6cbe8\",\n                                        \"ccy\": \"EUR\",\n                                        \"amount\": 17,\n                                        \"method\": \"CASH\",\n                                        \"creditorBankBIC\": \"ETHNGRAA\",\n                                        \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                        \"creditorBankIBAN\": \"GR41498760953239760\",\n                                        \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                        \"debtorTelephone\": \"2101234567\",\n                                        \"paymentType\": \"NBG\",\n                                        \"debitAccount\": \"GR7816570557954408\",\n                                        \"branch\": \"001\",\n                                        \"userId\": \"e302d3fbd53f4f55a2cfde4d0611191c\",\n                                        \"sendCutOffTime\": \"20180111T14:00:00.000Z\",\n                                        \"commNBG\": 0.2,\n                                        \"commUltimateDebtor\": 0.1,\n                                        \"commThirdParty\": 0.4,\n                                        \"commOther\": 0,\n                                        \"clearSysRef\": \"90773001121420176229\",\n                                        \"status\": \"COMPLETED\",\n                                        \"failureReason\": null,\n                                        \"timestamp\": \"20180110T22:00:00.000Z\",\n                                        \"subBranch\": \"01\",\n                                        \"impersonator\": null,\n                                        \"commSubAgent\": 0.03,\n                                        \"spotMachineTransactionDetails\": [\n                                            {\n                                                \"fieldKey\": \"PAYMENT_CODE\",\n                                                \"fieldValue\": \"90773\"\n                                            }\n                                        ]\n                                    },\n                                    {\n                                        \"id\": \"0140ca382bfb419fa7e0306dc68bffec\",\n                                        \"txId\": \"be770f97ac894ec7804e0c193bf16495\",\n                                        \"instrId\": \"399311CBC86F431895925081092D8F24\",\n                                        \"endToEndId\": \"90773001121420171285\",\n                                        \"paymentCode\": \"58f02321441c4c9587a2295092851534\",\n                                        \"ccy\": \"EUR\",\n                                        \"amount\": 53,\n                                        \"method\": \"CASH\",\n                                        \"creditorBankBIC\": \"ETHNGRAA\",\n                                        \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                        \"creditorBankIBAN\": \"GR41498760953239760\",\n                                        \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                        \"debtorTelephone\": \"2101234567\",\n                                        \"paymentType\": \"NBG\",\n                                        \"debitAccount\": \"GR7816570557954408\",\n                                        \"branch\": \"001\",\n                                        \"userId\": \"e302d3fbd53f4f55a2cfde4d0611191c\",\n                                        \"sendCutOffTime\": \"20180111T14:00:00.000Z\",\n                                        \"commNBG\": 0.2,\n                                        \"commUltimateDebtor\": 0.1,\n                                        \"commThirdParty\": 0.4,\n                                        \"commOther\": 0,\n                                        \"clearSysRef\": \"90773001121420171285\",\n                                        \"status\": \"COMPLETED\",\n                                        \"failureReason\": null,\n                                        \"timestamp\": \"20180111T11:47:55.321Z\",\n                                        \"subBranch\": \"01\",\n                                        \"impersonator\": null,\n                                        \"commSubAgent\": 0.03,\n                                        \"spotMachineTransactionDetails\": [\n                                            {\n                                                \"fieldKey\": \"PAYMENT_CODE\",\n                                                \"fieldValue\": \"90773\"\n                                            }\n                                        ]\n                                    }\n                                ],\n                                \"spotMachineAccounts\": [\n                                    {\n                                        \"id\": \"a222de0fc80342e68e0ae7ca76c2c552\",\n                                        \"IBANorBBAN\": \"GR2539560718447876\",\n                                        \"PAN\": null\n                                    }\n                                ],\n                                \"spotMachinePaymentCodeExceptions\": [],\n                                \"spotMachineNetworkLimits\": [\n                                    {\n                                        \"id\": \"07b1f36c74534fefa3122fde9d4e973e\",\n                                        \"limitType\": \"REVERSAL\",\n                                        \"limitScope\": \"SPOT_MACHINE\",\n                                        \"interval\": 5,\n                                        \"maxCount\": 1000,\n                                        \"maxAmount\": 1000000,\n                                        \"startDate\": \"20180111T11:47:55.321Z\",\n                                        \"endDate\": \"21180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineNetworkMessage\": [\n                                    {\n                                        \"id\": \"24d8c7410e1445d880cdcd84b8cefac7\",\n                                        \"category\": \"WELCOME\",\n                                        \"content\": \"Welcome to our network!\",\n                                        \"contentType\": \"Content Type\",\n                                        \"bitmapContent\": null,\n                                        \"endDate\": \"21180111T11:47:55.321Z\",\n                                        \"startDate\": \"20180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineLocation\": {\n                                    \"id\": \"ada8553ead9a4178913ae45c2714cc45\",\n                                    \"latitude\": \"47.65100\",\n                                    \"longitude\": \"122.34900\",\n                                    \"coordinatesSystem\": \"DECIMAL\",\n                                    \"address\": null\n                                }\n                            },\n                            {\n                                \"id\": \"ed833e5affcd46cfaa0c0ad527ea1c5b\",\n                                \"machineId\": \"DemoCentralizedAdministrationSpotMachine1\",\n                                \"serialNo\": \"\",\n                                \"machineType\": \"NetworkAdministrationTerminal\",\n                                \"description\": \"DemoCentralizedAdministrationSpotMachine1\",\n                                \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                                \"installedDate\": \"20180111T11:47:55.321Z\",\n                                \"startDate\": \"20180111T11:47:55.321Z\",\n                                \"endDate\": \"20190111T11:47:55.321Z\",\n                                \"status\": \"ENABLED\",\n                                \"authorizationUpdateLvl\": null,\n                                \"store\": \"\",\n                                \"spotMachineOTTs\": [],\n                                \"spotMachineTransactions\": [],\n                                \"spotMachineAccounts\": [\n                                    {\n                                        \"id\": \"8359dd7caa7142f1a7e7df8aa18f7ebe\",\n                                        \"IBANorBBAN\": \"GR5579486657194533\",\n                                        \"PAN\": null\n                                    }\n                                ],\n                                \"spotMachinePaymentCodeExceptions\": [],\n                                \"spotMachineNetworkLimits\": [\n                                    {\n                                        \"id\": \"d91a805a242e4552838518fea608d297\",\n                                        \"limitType\": \"REVERSAL\",\n                                        \"limitScope\": \"SPOT_MACHINE\",\n                                        \"interval\": 5,\n                                        \"maxCount\": 1000,\n                                        \"maxAmount\": 1000000,\n                                        \"startDate\": \"20180111T11:47:55.321Z\",\n                                        \"endDate\": \"21180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineNetworkMessage\": [\n                                    {\n                                        \"id\": \"d6f924e9ccfe413b98e889274d7d50e7\",\n                                        \"category\": \"WELCOME\",\n                                        \"content\": \"Welcome to our network!\",\n                                        \"contentType\": \"Content Type\",\n                                        \"bitmapContent\": null,\n                                        \"endDate\": \"21180111T11:47:55.321Z\",\n                                        \"startDate\": \"20180111T11:47:55.321Z\"\n                                    }\n                                ],\n                                \"spotMachineLocation\": {\n                                    \"id\": \"57d577fb196740a8aedba51c5e2329b9\",\n                                    \"latitude\": \"47.65100\",\n                                    \"longitude\": \"122.34900\",\n                                    \"coordinatesSystem\": \"DECIMAL\",\n                                    \"address\": null\n                                }\n                            }\n                        ],\n                        \"spotPaymentCodeExceptions\": [],\n                        \"spotNetworkLimits\": [],\n                        \"spotNetworkMessages\": []\n                    }\n                ]\n            }\n        ]\n}"
+							"raw": "{\n    \"sandboxID\": \"{{sandbox_id}}\",\n    \"users\": [\n        {\n            \"userId\": \"B31D78B2-7C32-49FE-98E9-47D2023EBA48\",\n            \"userName\": \"Main_User\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"IBANK_USER\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"f7645c8e-84d2-4cbd-a0b6-33a1a848eec2\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR89795407087704882154845415715711\"\n                },\n                {\n                    \"accountId\": \"f9b1097a-30c0-4d00-ac06-37be4b48e26b\",\n                    \"balance\": 1000000.0,\n                    \"accountType\": \"PAN\",\n                    \"accountTypeValue\": \"5269310500642511\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"e6da8f9c-ee8b-488c-9179-0a566e9d8aed\",\n            \"userName\": \"User1\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"IBANK_USER\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"d3bbdc30-741e-4bee-a5cc-eff8ac4982f7\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR8979540708770489\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"acd77e31-a637-48b6-a070-ffc5d1d68e63\",\n            \"userName\": \"User2\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"IBANK_USER\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"e146dde9-663c-47ea-8322-afda2c2aa907\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR7816570557954408\"\n                },\n                {\n                    \"accountId\": \"b3b9a9ac-e9e4-4a2a-b029-8bb35d5d1415\",\n                    \"balance\": 1000000.0,\n                    \"accountType\": \"PAN\",\n                    \"accountTypeValue\": \"5269310500542511\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"1eba60ac-62d8-4fea-bd67-40af173d7e1f\",\n            \"userName\": \"MEDIATOR_USER1\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"MEDIATOR\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"a222de0f-c803-42e6-8e0a-e7ca76c2c552\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR2539560718447876\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"e302d3fb-d53f-4f55-a2cf-de4d0611191c\",\n            \"userName\": \"MEDIATOR_MACHINE_USER1\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"MEDIATOR\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"a222de0f-c803-42e6-8e0a-e7ca76c2c552\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR2539560718447876\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"177814de-fa11-4d89-99fb-3343cbe01d98\",\n            \"userName\": \"MEDIATOR_MACHINE_USER2\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"MACHINE\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"8359dd7c-aa71-42f1-a7e7-df8aa18f7ebe\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR5579486657194533\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"d7fdc557-9088-431a-a3f2-e78444b90f46\",\n            \"userName\": \"MACHINE_USER1\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"MACHINE\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"1228b2d0-961a-4624-85ec-960665a2e235\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR7709480620146655\"\n                }\n            ]\n        },\n        {\n            \"userId\": \"4547cfbd-bffd-4e1e-83ec-d50dd16d7792\",\n            \"userName\": \"MACHINE_USER2\",\n            \"providerId\": \"NBG.gr\",\n            \"provider\": \"NBG\",\n            \"userType\": \"MACHINE\",\n            \"userAccounts\": [\n                {\n                    \"accountId\": \"48897307-2247-4514-8ace-1e2fbd2e17b3\",\n                    \"balance\": 100000.0,\n                    \"accountType\": \"IBAN\",\n                    \"accountTypeValue\": \"GR775496558894651\"\n                }\n            ]\n        }\n    ],\n    \"networks\": [\n        {\n            \"id\": \"7fa7e3e0-77d1-4587-b04e-7e8793c0263e\",\n            \"name\": \"TPP4USERS_NETWORK\",\n            \"commercialName\": \"TPP4USERS_NETWORK\",\n            \"paymentChannel\": \"5bd5d761-fee4-4ee9-a412-3769e14d2fc6\",\n            \"startDate\": \"2020-10-04T11:00:45.362Z\",\n            \"endDate\": \"2021-10-04T11:00:45.362Z\",\n            \"networkMetadata\": [\n                {\n                    \"id\": \"cfd19574-f719-4629-b295-2adc6f21834b\",\n                    \"fieldKey\": \"IS_CANCEL_ADMIN_ALLOWED\",\n                    \"fieldValue\": \"FALSE\"\n                },\n                {\n                    \"id\": \"756ab572-ce5f-4fe3-867d-9e50839adaf3\",\n                    \"fieldKey\": \"CANCELLATION_WITH_REPAY\",\n                    \"fieldValue\": \"FALSE\"\n                },\n                {\n                    \"id\": \"24c02cf5-f17d-4630-9dac-bffc16c952e9\",\n                    \"fieldKey\": \"MODE\",\n                    \"fieldValue\": \"TPP4USERS\"\n                },\n                {\n                    \"id\": \"1742297c-281c-42da-aee7-5ccdc4992505\",\n                    \"fieldKey\": \"MAX_CANCELLATION_PERC\",\n                    \"fieldValue\": \"0\"\n                },\n                {\n                    \"id\": \"9ad209e1-4ce4-4645-b3d0-848d81be56fc\",\n                    \"fieldKey\": \"TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE\",\n                    \"fieldValue\": \"DEFAULT\"\n                },\n                {\n                    \"id\": \"993b2143-b6ed-44dc-a655-a1a05d9511f5\",\n                    \"fieldKey\": \"MIN_CANCELLATION_PERC\",\n                    \"fieldValue\": \"0\"\n                },\n                {\n                    \"id\": \"dd2ef94e-acc2-4913-a47d-bbd9199268f5\",\n                    \"fieldKey\": \"SPOT_REGISTRATION_AUTHORIZATION\",\n                    \"fieldValue\": \"DEFAULT\"\n                },\n                {\n                    \"id\": \"27493b34-d5c2-407f-a4d4-37ac3cfd221e\",\n                    \"fieldKey\": \"ALLOW_ULTIMATE_DEBTOR\",\n                    \"fieldValue\": \"FALSE\"\n                },\n                {\n                    \"id\": \"4ffffef3-d459-4f85-8f08-08f389f697c9\",\n                    \"fieldKey\": \"PUBLIC_Test_Metadata\",\n                    \"fieldValue\": \"Test Network Metadata\"\n                }\n            ],\n            \"networkAccounts\": [\n                {\n                    \"id\": \"8a82af32-25df-48b8-b29e-79d1cb37b5df\",\n                    \"IBANorBBAN\": \"GR5983850494884574\",\n                    \"PAN\": null,\n                    \"accountType\": \"ULTDEBTOR_INTERACCOUNT\"\n                }\n            ],\n            \"networkLimits\": [],\n            \"networkMessages\": [],\n            \"spots\": [\n                {\n                    \"id\": \"7b75b6ac-0ca8-4e38-ba36-d21a94f829dc\",\n                    \"name\": \"TPP4USERSSPOT\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.362Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.362Z\",\n                    \"ownerIBUserId\": \"e6da8f9c-ee8b-488c-9179-0a566e9d8aed\",\n                    \"ssn\": \"987654321\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"e0c3cfc6-db41-432a-8fa5-dbb230dbcfed\",\n                            \"machineId\": \"DemoTPP4UsersSpotMachine1\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoTPP4UsersSpotMachine1\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.362Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.362Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.362Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [\n                                {\n                                    \"id\": \"9cb93365-b498-403d-ae2e-dfe788e25b71\",\n                                    \"txId\": \"a76b579d-ed50-4d2b-a053-628247140593\",\n                                    \"instrId\": \"38450793-1d68-4a60-bed1-313538a1bb01\",\n                                    \"endToEndId\": \"90773001121420176229\",\n                                    \"paymentCode\": \"69d6ffc8-cc65-4130-a172-d2fa16b6cbe8\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 17.00,\n                                    \"method\": \"ACCT\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR7816570557954408\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"acd77e31-a637-48b6-a070-ffc5d1d68e63\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"11773001121420176229\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-04T11:00:45.378Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                }\n                            ],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"d3bbdc30-741e-4bee-a5cc-eff8ac4982f7\",\n                                    \"IBANorBBAN\": \"GR8979540708770489\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [\n                                {\n                                    \"id\": \"b98e0f04-2660-463f-b97f-146ac93bd256\",\n                                    \"limitType\": \"REVERSAL\",\n                                    \"limitScope\": \"SPOT_MACHINE\",\n                                    \"interval\": 1,\n                                    \"maxCount\": 1000,\n                                    \"maxAmount\": 1000000.0,\n                                    \"startDate\": \"2020-10-04T11:00:45.362Z\",\n                                    \"endDate\": \"2120-10-04T11:00:45.362Z\"\n                                }\n                            ],\n                            \"spotMachineNetworkMessage\": [\n                                {\n                                    \"id\": \"0386c144-0c01-4f28-b3da-1a3d9bf68274\",\n                                    \"category\": \"WELCOME\",\n                                    \"content\": \"Welcome to our network!\",\n                                    \"contentType\": \"Content Type\",\n                                    \"bitmapContent\": null,\n                                    \"endDate\": \"2120-10-04T11:00:45.362Z\",\n                                    \"startDate\": \"2020-10-04T11:00:45.362Z\"\n                                }\n                            ],\n                            \"spotMachineLocation\": {\n                                \"id\": \"6c323092-7540-408f-ad6d-9d9d2fafc365\",\n                                \"latitude\": \"47.65100\",\n                                \"longitude\": \"-122.34900\",\n                                \"coordinatesSystem\": \"DECIMAL\",\n                                \"address\": null\n                            }\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                },\n                {\n                    \"id\": \"db5bdb80-7e0a-4d23-a7fb-300180fde0e5\",\n                    \"name\": \"TPP4USERSSPOT_2\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.378Z\",\n                    \"ownerIBUserId\": \"acd77e31-a637-48b6-a070-ffc5d1d68e63\",\n                    \"ssn\": \"012345678\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"ea1131a9-85cb-4296-a54f-ab2a5d0ca862\",\n                            \"machineId\": \"DemoTPP4UsersSpotMachine2\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoTPP4UsersSpotMachine2\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.378Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.378Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"e146dde9-663c-47ea-8322-afda2c2aa907\",\n                                    \"IBANorBBAN\": \"GR7816570557954408\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                },\n                {\n                    \"id\": \"da3df55f-6212-492b-b735-1a7852948f5f\",\n                    \"name\": \"TPP4USERSCLIENTIDSPOT\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.378Z\",\n                    \"ownerIBUserId\": \"B31D78B2-7C32-49FE-98E9-47D2023EBA48\",\n                    \"ssn\": \"111111111\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"39bb3564-2c8c-4e0b-83ee-0650c19501aa\",\n                            \"machineId\": \"DemoTPP4UsersSpotMachine3\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoTPP4UsersSpotMachine3\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.378Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.378Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"f7645c8e-84d2-4cbd-a0b6-33a1a848eec2\",\n                                    \"IBANorBBAN\": \"GR89795407087704882154845415715711\",\n                                    \"PAN\": \"5269310500642511\"\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                }\n            ]\n        },\n        {\n            \"id\": \"b736c462-5553-4c5e-81e4-bcad5853090c\",\n            \"name\": \"DEMO_DECENTRALIZED_NETWORK\",\n            \"commercialName\": \"DEMO_DECENTRALIZED_NETWORK\",\n            \"paymentChannel\": \"475f5b9a-d607-4a46-a884-1bdc9edbfb06\",\n            \"startDate\": \"2020-10-04T11:00:45.378Z\",\n            \"endDate\": \"2021-10-04T11:00:45.378Z\",\n            \"networkMetadata\": [\n                {\n                    \"id\": \"ab593dbe-01ac-4d9a-8eed-ab7eb9fc20c7\",\n                    \"fieldKey\": \"IS_CANCEL_ADMIN_ALLOWED\",\n                    \"fieldValue\": \"TRUE\"\n                },\n                {\n                    \"id\": \"de1cecc7-7936-4739-a476-b13c2a6c6920\",\n                    \"fieldKey\": \"CANCELLATION_WITH_REPAY\",\n                    \"fieldValue\": \"FALSE\"\n                },\n                {\n                    \"id\": \"fec2eb8a-ca04-4c1b-9330-946a9959b2d9\",\n                    \"fieldKey\": \"MODE\",\n                    \"fieldValue\": \"DECENTRALIZED\"\n                },\n                {\n                    \"id\": \"bb41c968-1c4b-4083-a3f7-82913dbb9c51\",\n                    \"fieldKey\": \"MAX_CANCELLATION_PERC\",\n                    \"fieldValue\": \"120\"\n                },\n                {\n                    \"id\": \"67affbe8-026f-41ac-b13b-4b2a1d0f10cf\",\n                    \"fieldKey\": \"TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE\",\n                    \"fieldValue\": \"DEFAULT\"\n                },\n                {\n                    \"id\": \"9731c166-3733-4d3a-a0af-35ad48d1bfc4\",\n                    \"fieldKey\": \"MIN_CANCELLATION_PERC\",\n                    \"fieldValue\": \"25\"\n                },\n                {\n                    \"id\": \"e2922671-4a4f-4e32-8887-175c5a6fd197\",\n                    \"fieldKey\": \"SPOT_REGISTRATION_AUTHORIZATION\",\n                    \"fieldValue\": \"DEFAULT\"\n                },\n                {\n                    \"id\": \"8f1023f0-8f5c-40e6-8ae5-eece5ec958c7\",\n                    \"fieldKey\": \"ALLOW_ULTIMATE_DEBTOR\",\n                    \"fieldValue\": \"FALSE\"\n                }\n            ],\n            \"networkAccounts\": [\n                {\n                    \"id\": \"f942e391-afbc-49f6-ac4b-c17a085b866e\",\n                    \"IBANorBBAN\": \"GR9746980283764142\",\n                    \"PAN\": null,\n                    \"accountType\": \"ULTDEBTOR_INTERACCOUNT\"\n                }\n            ],\n            \"networkLimits\": [],\n            \"networkMessages\": [],\n            \"spots\": [\n                {\n                    \"id\": \"e32560a4-192e-4420-9fca-62cabd12007f\",\n                    \"name\": \"DemoDecentralizedSpot1\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.378Z\",\n                    \"ownerIBUserId\": \"d7fdc557-9088-431a-a3f2-e78444b90f46\",\n                    \"ssn\": \"OO4UVVYDDU\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"0e9ee31e-a104-47ae-b69f-609a2391d610\",\n                            \"machineId\": \"DemoDecentralizedSpotMachine1\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoDecentralizedSpotMachine1\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.378Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.378Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [\n                                {\n                                    \"id\": \"5838ce85-9193-47e2-9e1f-9befd0ade73b\",\n                                    \"txId\": \"1329aa5d-ce35-4d5b-9334-49d6b586e7bb\",\n                                    \"instrId\": \"E93F0F84-AA39-470F-BF7C-22725271C4AF\",\n                                    \"endToEndId\": \"90773001121420176229\",\n                                    \"paymentCode\": \"69d6ffc8-cc65-4130-a172-d2fa16b6cbe8\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 17.00,\n                                    \"method\": \"CASH\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR7816570557954408\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"d7fdc557-9088-431a-a3f2-e78444b90f46\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"22773001121420176229\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-03T21:00:00.000Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                },\n                                {\n                                    \"id\": \"3676232b-de2e-4942-8ea2-e9e04ba8aceb\",\n                                    \"txId\": \"3263f979-2fe1-4c9c-9dd9-4dd5db0ea866\",\n                                    \"instrId\": \"BBCA19FF-9663-495A-B3B1-0395F7A8AA4C\",\n                                    \"endToEndId\": \"90773001121420171285\",\n                                    \"paymentCode\": \"58f02321-441c-4c95-87a2-295092851534\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 53.00,\n                                    \"method\": \"CASH\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR7816570557954408\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"d7fdc557-9088-431a-a3f2-e78444b90f46\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"90773001121420171285\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-04T11:00:45.394Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                }\n                            ],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"1228b2d0-961a-4624-85ec-960665a2e235\",\n                                    \"IBANorBBAN\": \"GR7709480620146655\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [\n                                {\n                                    \"id\": \"a8f9275c-2ec5-4334-9bfb-01b1a41e42f3\",\n                                    \"limitType\": \"REVERSAL\",\n                                    \"limitScope\": \"SPOT_MACHINE\",\n                                    \"interval\": 1,\n                                    \"maxCount\": 1000,\n                                    \"maxAmount\": 1000000.0,\n                                    \"startDate\": \"2020-10-04T11:00:45.378Z\",\n                                    \"endDate\": \"2120-10-04T11:00:45.378Z\"\n                                }\n                            ],\n                            \"spotMachineNetworkMessage\": [\n                                {\n                                    \"id\": \"f233b880-6f1f-461e-8006-346ce0a8686f\",\n                                    \"category\": \"WELCOME\",\n                                    \"content\": \"Welcome to our network!\",\n                                    \"contentType\": \"Content Type\",\n                                    \"bitmapContent\": null,\n                                    \"endDate\": \"2120-10-04T11:00:45.378Z\",\n                                    \"startDate\": \"2020-10-04T11:00:45.378Z\"\n                                }\n                            ],\n                            \"spotMachineLocation\": {\n                                \"id\": \"8d48bdc4-b881-45c1-b0c6-f583c3bc6b9f\",\n                                \"latitude\": \"47.65100\",\n                                \"longitude\": \"-122.34900\",\n                                \"coordinatesSystem\": \"DECIMAL\",\n                                \"address\": null\n                            }\n                        },\n                        {\n                            \"id\": \"8e18d9e3-3f5f-4957-a689-708b58d4ffcd\",\n                            \"machineId\": \"DemoDecentralizedSpotNetworkAdministrationMachine1\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"NetworkAdministrationTerminal\",\n                            \"description\": \"DemoDecentralizedSpotNetworkAdministrationMachine1\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.394Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.394Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.394Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"48897307-2247-4514-8ace-1e2fbd2e17b3\",\n                                    \"IBANorBBAN\": \"GR775496558894651\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [\n                                {\n                                    \"id\": \"befd8d08-cb91-4d65-a0c9-9c2c5bf76b87\",\n                                    \"limitType\": \"REVERSAL\",\n                                    \"limitScope\": \"SPOT_MACHINE\",\n                                    \"interval\": 1,\n                                    \"maxCount\": 1000,\n                                    \"maxAmount\": 1000000.0,\n                                    \"startDate\": \"2020-10-04T11:00:45.394Z\",\n                                    \"endDate\": \"2120-10-04T11:00:45.394Z\"\n                                }\n                            ],\n                            \"spotMachineNetworkMessage\": [\n                                {\n                                    \"id\": \"1a5b3b9f-fdb9-4e66-bb93-3ca8970f09c2\",\n                                    \"category\": \"WELCOME\",\n                                    \"content\": \"Welcome to our network!\",\n                                    \"contentType\": \"Content Type\",\n                                    \"bitmapContent\": null,\n                                    \"endDate\": \"2120-10-04T11:00:45.394Z\",\n                                    \"startDate\": \"2020-10-04T11:00:45.394Z\"\n                                }\n                            ],\n                            \"spotMachineLocation\": {\n                                \"id\": \"9ef22719-713a-45da-875d-b3321efde76b\",\n                                \"latitude\": \"47.65100\",\n                                \"longitude\": \"-122.34900\",\n                                \"coordinatesSystem\": \"DECIMAL\",\n                                \"address\": null\n                            }\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                },\n                {\n                    \"id\": \"03323c9e-8686-45b6-8e81-ad813eced96a\",\n                    \"name\": \"DemoDecentralizedSpot2\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.394Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.394Z\",\n                    \"ownerIBUserId\": \"B31D78B2-7C32-49FE-98E9-47D2023EBA48\",\n                    \"ssn\": \"111111111\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"61cc3e77-3545-4a22-a7a5-7d9a7b7d3ea3\",\n                            \"machineId\": \"DemoDecentralizedSpotMachine2\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoDecentralizedSpotMachine2\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.394Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.394Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.394Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [\n                                {\n                                    \"id\": \"e1c1bc17-7001-4631-b79d-84f79d4984d9\",\n                                    \"txId\": \"db986460-52bf-4d96-831d-ee3059a8dbd6\",\n                                    \"instrId\": \"5D9F460A-A9FA-4339-9C6C-A8954BE07E98\",\n                                    \"endToEndId\": \"9077300112142017659\",\n                                    \"paymentCode\": \"69d6ffc8-cc65-4130-a172-d2fa16b6cbe8\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 17.00,\n                                    \"method\": \"CASH\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"CLIENT FULLNAME\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR89795407087704882154845415715711\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"B31D78B2-7C32-49FE-98E9-47D2023EBA48\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"22773001121420173429\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-03T21:00:00.000Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                }\n                            ],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"f7645c8e-84d2-4cbd-a0b6-33a1a848eec2\",\n                                    \"IBANorBBAN\": \"GR89795407087704882154845415715711\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        },\n                        {\n                            \"id\": \"80a6e410-b22a-4753-b3a5-46c8907cb356\",\n                            \"machineId\": \"DemoDecentralizedSpotNetworkAdministrationMachine2\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"NetworkAdministrationTerminal\",\n                            \"description\": \"DemoDecentralizedSpotNetworkAdministrationMachine2\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.394Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.394Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.394Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"f7645c8e-84d2-4cbd-a0b6-33a1a848eec2\",\n                                    \"IBANorBBAN\": \"GR89795407087704882154845415715711\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                }\n            ]\n        },\n        {\n            \"id\": \"8133eda9-e715-4497-9395-f7721b004292\",\n            \"name\": \"DEMO_CENTRALIZED_NETWORK\",\n            \"commercialName\": \"DEMO_CENTRALIZED_NETWORK\",\n            \"paymentChannel\": \"d141ee4e-6062-419a-8495-3cdfcb13b409\",\n            \"startDate\": \"2020-10-04T11:00:45.394Z\",\n            \"endDate\": \"2021-10-04T11:00:45.394Z\",\n            \"networkMetadata\": [\n                {\n                    \"id\": \"97013e64-ec63-4074-8c01-64dc9a1dc369\",\n                    \"fieldKey\": \"IS_CANCEL_ADMIN_ALLOWED\",\n                    \"fieldValue\": \"FALSE\"\n                },\n                {\n                    \"id\": \"0e35a932-e2e0-4a0d-9ae0-7bcd26bbb6e5\",\n                    \"fieldKey\": \"CANCELLATION_WITH_REPAY\",\n                    \"fieldValue\": \"FALSE\"\n                },\n                {\n                    \"id\": \"f7fe8cb0-f64f-448d-8e1e-637cb8bfa8cb\",\n                    \"fieldKey\": \"MODE\",\n                    \"fieldValue\": \"CENTRALIZED\"\n                },\n                {\n                    \"id\": \"825162c7-590e-480d-9ea7-bd13bcac7190\",\n                    \"fieldKey\": \"MAX_CANCELLATION_PERC\",\n                    \"fieldValue\": \"0\"\n                },\n                {\n                    \"id\": \"0b8fce93-c20f-486e-80a4-0a4b1a4f2fba\",\n                    \"fieldKey\": \"TRANSACTION_TERMINAL_PASSWORD_GENERATION_MODE\",\n                    \"fieldValue\": \"DEFAULT\"\n                },\n                {\n                    \"id\": \"6aa0e60a-05ba-4215-bf34-69135d50d81e\",\n                    \"fieldKey\": \"MIN_CANCELLATION_PERC\",\n                    \"fieldValue\": \"0\"\n                },\n                {\n                    \"id\": \"34a4d05e-47a3-44db-aea6-773b0c643acb\",\n                    \"fieldKey\": \"PAYMENT_INSTITUTION\",\n                    \"fieldValue\": \"PAYMENT INSTITUTION\"\n                },\n                {\n                    \"id\": \"20d4f168-9dcb-40c8-aad4-342366035d7f\",\n                    \"fieldKey\": \"SPOT_REGISTRATION_AUTHORIZATION\",\n                    \"fieldValue\": \"PaymentInstitutionAdministrator\"\n                },\n                {\n                    \"id\": \"3e9c4242-a738-4a9a-bdf7-3ce493c2314f\",\n                    \"fieldKey\": \"ALLOW_ULTIMATE_DEBTOR\",\n                    \"fieldValue\": \"FALSE\"\n                }\n            ],\n            \"networkAccounts\": [\n                {\n                    \"id\": \"496e136b-3448-4544-bb42-61aa64cc4e88\",\n                    \"IBANorBBAN\": \"GR0630590502161789\",\n                    \"PAN\": null,\n                    \"accountType\": \"ULTDEBTOR_INTERACCOUNT\"\n                }\n            ],\n            \"networkLimits\": [],\n            \"networkMessages\": [],\n            \"spots\": [\n                {\n                    \"id\": \"1de1fac3-aa11-484e-bb75-b59b951a93cd\",\n                    \"name\": \"DemoCentralizedSpot1\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.409Z\",\n                    \"ownerIBUserId\": \"1eba60ac-62d8-4fea-bd67-40af173d7e1f\",\n                    \"ssn\": \"9PAUPTQIKK\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"c850e76e-6ea7-45b4-af18-742ef516944b\",\n                            \"machineId\": \"DemoCentralizedMediatorSpotMachine1\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"Mediator\",\n                            \"description\": \"DemoCentralizedMediatorSpotMachine1\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.409Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": null,\n                            \"spotMachineNetworkLimits\": [\n                                {\n                                    \"id\": \"16d0bb59-1f9b-41a4-b1ea-9294e7927425\",\n                                    \"limitType\": \"REVERSAL\",\n                                    \"limitScope\": \"SPOT_MACHINE\",\n                                    \"interval\": 1,\n                                    \"maxCount\": 1000,\n                                    \"maxAmount\": 1000000.0,\n                                    \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                                    \"endDate\": \"2120-10-04T11:00:45.409Z\"\n                                }\n                            ],\n                            \"spotMachineNetworkMessage\": [\n                                {\n                                    \"id\": \"4d34b875-608c-4b36-b204-9090532ca047\",\n                                    \"category\": \"WELCOME\",\n                                    \"content\": \"Welcome to our network!\",\n                                    \"contentType\": \"Content Type\",\n                                    \"bitmapContent\": null,\n                                    \"endDate\": \"2120-10-04T11:00:45.409Z\",\n                                    \"startDate\": \"2020-10-04T11:00:45.409Z\"\n                                }\n                            ],\n                            \"spotMachineLocation\": {\n                                \"id\": \"ada8553e-ad9a-4178-913a-e45c2714cc45\",\n                                \"latitude\": \"47.65100\",\n                                \"longitude\": \"-122.34900\",\n                                \"coordinatesSystem\": \"DECIMAL\",\n                                \"address\": null\n                            }\n                        },\n                        {\n                            \"id\": \"cae44dde-2e0d-45aa-8c45-71f0a36ee3e7\",\n                            \"machineId\": \"DemoCentralizedSpotMachine1\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoCentralizedSpotMachine1\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.409Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [\n                                {\n                                    \"id\": \"82c01e5f-c2c5-4e8c-aa15-83fc7ab14480\",\n                                    \"txId\": \"b41d665c-ef69-487d-93b0-0de978a1295a\",\n                                    \"instrId\": \"21CA8C79-4D25-40E9-AC6D-90AF2D263E6A\",\n                                    \"endToEndId\": \"90773001121420176229\",\n                                    \"paymentCode\": \"69d6ffc8-cc65-4130-a172-d2fa16b6cbe8\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 17.00,\n                                    \"method\": \"CASH\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR7816570557954408\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"e302d3fb-d53f-4f55-a2cf-de4d0611191c\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"90773001121420176229\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-03T21:00:00.000Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                },\n                                {\n                                    \"id\": \"0140ca38-2bfb-419f-a7e0-306dc68bffec\",\n                                    \"txId\": \"be770f97-ac89-4ec7-804e-0c193bf16495\",\n                                    \"instrId\": \"399311CB-C86F-4318-9592-5081092D8F24\",\n                                    \"endToEndId\": \"90773001121420171285\",\n                                    \"paymentCode\": \"58f02321-441c-4c95-87a2-295092851534\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 53.00,\n                                    \"method\": \"CASH\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΙΩΡΓΟΣ\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR7816570557954408\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"e302d3fb-d53f-4f55-a2cf-de4d0611191c\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"90773001121420171285\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-04T11:00:45.409Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                }\n                            ],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"a222de0f-c803-42e6-8e0a-e7ca76c2c552\",\n                                    \"IBANorBBAN\": \"GR2539560718447876\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [\n                                {\n                                    \"id\": \"07b1f36c-7453-4fef-a312-2fde9d4e973e\",\n                                    \"limitType\": \"REVERSAL\",\n                                    \"limitScope\": \"SPOT_MACHINE\",\n                                    \"interval\": 1,\n                                    \"maxCount\": 1000,\n                                    \"maxAmount\": 1000000.0,\n                                    \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                                    \"endDate\": \"2120-10-04T11:00:45.409Z\"\n                                }\n                            ],\n                            \"spotMachineNetworkMessage\": [\n                                {\n                                    \"id\": \"24d8c741-0e14-45d8-80cd-cd84b8cefac7\",\n                                    \"category\": \"WELCOME\",\n                                    \"content\": \"Welcome to our network!\",\n                                    \"contentType\": \"Content Type\",\n                                    \"bitmapContent\": null,\n                                    \"endDate\": \"2120-10-04T11:00:45.409Z\",\n                                    \"startDate\": \"2020-10-04T11:00:45.409Z\"\n                                }\n                            ],\n                            \"spotMachineLocation\": {\n                                \"id\": \"ada8553e-ad9a-4178-913a-e45c2714cc45\",\n                                \"latitude\": \"47.65100\",\n                                \"longitude\": \"-122.34900\",\n                                \"coordinatesSystem\": \"DECIMAL\",\n                                \"address\": null\n                            }\n                        },\n                        {\n                            \"id\": \"ed833e5a-ffcd-46cf-aa0c-0ad527ea1c5b\",\n                            \"machineId\": \"DemoCentralizedAdministrationSpotMachine1\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"NetworkAdministrationTerminal\",\n                            \"description\": \"DemoCentralizedAdministrationSpotMachine1\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.409Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"8359dd7c-aa71-42f1-a7e7-df8aa18f7ebe\",\n                                    \"IBANorBBAN\": \"GR5579486657194533\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [\n                                {\n                                    \"id\": \"d91a805a-242e-4552-8385-18fea608d297\",\n                                    \"limitType\": \"REVERSAL\",\n                                    \"limitScope\": \"SPOT_MACHINE\",\n                                    \"interval\": 1,\n                                    \"maxCount\": 1000,\n                                    \"maxAmount\": 1000000.0,\n                                    \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                                    \"endDate\": \"2120-10-04T11:00:45.409Z\"\n                                }\n                            ],\n                            \"spotMachineNetworkMessage\": [\n                                {\n                                    \"id\": \"d6f924e9-ccfe-413b-98e8-89274d7d50e7\",\n                                    \"category\": \"WELCOME\",\n                                    \"content\": \"Welcome to our network!\",\n                                    \"contentType\": \"Content Type\",\n                                    \"bitmapContent\": null,\n                                    \"endDate\": \"2120-10-04T11:00:45.409Z\",\n                                    \"startDate\": \"2020-10-04T11:00:45.409Z\"\n                                }\n                            ],\n                            \"spotMachineLocation\": {\n                                \"id\": \"57d577fb-1967-40a8-aedb-a51c5e2329b9\",\n                                \"latitude\": \"47.65100\",\n                                \"longitude\": \"-122.34900\",\n                                \"coordinatesSystem\": \"DECIMAL\",\n                                \"address\": null\n                            }\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                },\n                {\n                    \"id\": \"c65efd43-2c6d-4492-8018-c729813bf36c\",\n                    \"name\": \"DemoCentralizedSpot2\",\n                    \"comments\": null,\n                    \"address\": \"Γαργγητού 99\",\n                    \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                    \"endDate\": \"2021-10-04T11:00:45.409Z\",\n                    \"ownerIBUserId\": \"B31D78B2-7C32-49FE-98E9-47D2023EBA48\",\n                    \"ssn\": \"111111111\",\n                    \"status\": \"ENABLED\",\n                    \"authorizationUpdateLvl\": \"NETWORK\",\n                    \"spotMachines\": [\n                        {\n                            \"id\": \"d82ecfe3-8556-4450-989f-46747f1fe55e\",\n                            \"machineId\": \"DemoCentralizedMediatorSpotMachine2\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"Mediator\",\n                            \"description\": \"DemoCentralizedMediatorSpotMachine2\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.409Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.409Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": null,\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        },\n                        {\n                            \"id\": \"346146fa-4760-4262-a93f-c4dd16b4930f\",\n                            \"machineId\": \"DemoCentralizedSpotMachine2\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"TransactionTerminal\",\n                            \"description\": \"DemoCentralizedSpotMachine2\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.425Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.425Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.425Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [\n                                {\n                                    \"id\": \"dea6cc9a-0fde-48b6-9388-340c366bf3ec\",\n                                    \"txId\": \"fa8c1649-bca8-483c-ac6c-ca073785c861\",\n                                    \"instrId\": \"C914DC54-0BB3-484B-AFAA-796BFF7AC595\",\n                                    \"endToEndId\": \"90773001121420185229\",\n                                    \"paymentCode\": \"69d6ffc8-cc65-4130-a172-d2fa16b6cbe8\",\n                                    \"ccy\": \"EUR\",\n                                    \"amount\": 17.00,\n                                    \"method\": \"CASH\",\n                                    \"creditorBankBIC\": \"ETHNGRAA\",\n                                    \"creditorBankName\": \"ΕΘΝΙΚΗ\",\n                                    \"creditorBankIBAN\": \"GR41498760953239760\",\n                                    \"debtorName\": \"CLIENT FULLNAME\",\n                                    \"debtorTelephone\": \"2101234567\",\n                                    \"paymentType\": \"NBG\",\n                                    \"debitAccount\": \"GR89795407087704882154845415715711\",\n                                    \"branch\": \"001\",\n                                    \"userId\": \"B31D78B2-7C32-49FE-98E9-47D2023EBA48\",\n                                    \"sendCutOffTime\": \"2020-10-04T18:00:00.000Z\",\n                                    \"commNBG\": 0.2,\n                                    \"commUltimateDebtor\": 0.1,\n                                    \"commThirdParty\": 0.4,\n                                    \"commOther\": 0.00,\n                                    \"clearSysRef\": \"90773001121420176229\",\n                                    \"status\": \"COMPLETED\",\n                                    \"failureReason\": null,\n                                    \"timestamp\": \"2020-10-03T21:00:00.000Z\",\n                                    \"subBranch\": \"01\",\n                                    \"impersonator\": null,\n                                    \"commSubAgent\": 0.03,\n                                    \"spotMachineTransactionDetails\": [\n                                        {\n                                            \"fieldKey\": \"PAYMENT_CODE\",\n                                            \"fieldValue\": \"90773\"\n                                        }\n                                    ]\n                                }\n                            ],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"f7645c8e-84d2-4cbd-a0b6-33a1a848eec2\",\n                                    \"IBANorBBAN\": \"GR89795407087704882154845415715711\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        },\n                        {\n                            \"id\": \"0601d816-376a-4739-bdb0-aeafb28153e4\",\n                            \"machineId\": \"DemoCentralizedAdministrationSpotMachine2\",\n                            \"serialNo\": \"\",\n                            \"machineType\": \"NetworkAdministrationTerminal\",\n                            \"description\": \"DemoCentralizedAdministrationSpotMachine2\",\n                            \"installedSoftware\": \"CASH_REGISTER_SIMPLE_PAY_SPOT\",\n                            \"installedDate\": \"2020-10-04T11:00:45.425Z\",\n                            \"startDate\": \"2020-10-04T11:00:45.425Z\",\n                            \"endDate\": \"2021-10-04T11:00:45.425Z\",\n                            \"status\": \"ENABLED\",\n                            \"authorizationUpdateLvl\": null,\n                            \"store\": \"\",\n                            \"spotMachineOTTs\": [],\n                            \"spotMachineTransactions\": [],\n                            \"spotMachineAccounts\": [\n                                {\n                                    \"id\": \"f7645c8e-84d2-4cbd-a0b6-33a1a848eec2\",\n                                    \"IBANorBBAN\": \"GR89795407087704882154845415715711\",\n                                    \"PAN\": null\n                                }\n                            ],\n                            \"spotMachineNetworkLimits\": [],\n                            \"spotMachineNetworkMessage\": [],\n                            \"spotMachineLocation\": null\n                        }\n                    ],\n                    \"spotNetworkLimits\": [],\n                    \"spotNetworkMessages\": []\n                }\n            ]\n        }\n    ],\n    \"massPaymentsRepository\": {\n        \"massPaymentsJobs\": []\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}"
 							]
@@ -154,7 +159,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6c5938d2-3f2a-4461-a8de-f1bbb604a59d",
+								"id": "2d583384-a1fe-47c5-bf36-f504f315b4e3",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -178,10 +183,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}"
 							]
@@ -202,7 +207,7 @@
 									"tests[\"payload not empty\"] = jsonData.payload !== null;",
 									"tests[\"exception is empty\"] = jsonData.exception === null;"
 								],
-								"id": "cb43dfc8-c7c6-4d9f-a88b-cf3a8530d21e"
+								"id": "79326c3e-e3d8-4bcc-aa05-7f11f441c078"
 							}
 						}
 					],
@@ -250,10 +255,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}",
 								"users"
@@ -275,7 +280,7 @@
 									"tests[\"payload not empty\"] = jsonData.payload !== null;",
 									"tests[\"exception is empty\"] = jsonData.exception === null;"
 								],
-								"id": "6b7b697a-c82b-4ccf-9058-71f8ab5cd5a8"
+								"id": "2e0dbb12-7eba-4454-83ad-8bdd9b08ff13"
 							}
 						}
 					],
@@ -295,10 +300,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}",
 								"users",
@@ -324,7 +329,7 @@
 									"",
 									"postman.setEnvironmentVariable(\"User2TestAccountID\", jsonData.payload.accountId);"
 								],
-								"id": "a6282ade-4ea6-4358-8472-329da860cab9"
+								"id": "1fd60a1d-3463-47ca-ba9a-dc75283be8fc"
 							}
 						}
 					],
@@ -348,10 +353,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}",
 								"users",
@@ -375,7 +380,7 @@
 									"tests[\"payload not empty\"] = jsonData.payload !== null;",
 									"tests[\"exception is empty\"] = jsonData.exception === null;"
 								],
-								"id": "bea75419-112a-4e48-b4c7-2033f008d787"
+								"id": "35b0e7ef-658f-4e8a-a08f-e59390958ef7"
 							}
 						}
 					],
@@ -399,10 +404,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts/{{UserTestAccountID}}",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}",
 								"users",
@@ -436,10 +441,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts/{{UserTestAccountID}}",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}",
 								"users",
@@ -477,10 +482,10 @@
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/transactions",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"sandbox",
 								"{{sandbox_id}}",
 								"transactions"
@@ -505,7 +510,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23e6ece4-a5ab-47ce-a7e0-100f4990ad1b",
+										"id": "101105b8-fdee-41db-b282-335c654f3a8f",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -542,10 +547,10 @@
 									"raw": "https://{{root_url}}/Payments/commission",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"commission"
 									]
@@ -559,7 +564,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "db84df55-0e7c-4990-bbe4-521ced172694",
+										"id": "e7d990f3-f4cd-4b1d-9a76-405488840819",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -599,10 +604,10 @@
 									"raw": "https://{{root_url}}/Payments/pay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"pay"
 									]
@@ -616,7 +621,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9f487c19-6708-4ca4-975f-7a22dec59ade",
+										"id": "e7c6bcc0-73bc-447b-8014-21349e78f459",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -661,10 +666,10 @@
 									"raw": "https://{{root_url}}/Payments/pay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"pay"
 									]
@@ -678,7 +683,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "303471dc-0702-45c6-b108-0c92b8fa404a",
+										"id": "378a4065-66de-4f30-9a0e-fd944399acc4",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -713,10 +718,10 @@
 									"raw": "https://{{root_url}}/Payments/cancelPayment",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"cancelPayment"
 									]
@@ -730,7 +735,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ed2fa98e-6ced-4871-b6fc-f6d5e0ca823b",
+										"id": "b49c56e1-9dfe-4c5e-836b-cb5113844129",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -765,10 +770,10 @@
 									"raw": "https://{{root_url}}/Payments/cancelPayment",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"cancelPayment"
 									]
@@ -782,7 +787,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "565cf9fd-4e0f-46d7-9dc4-611828a69c89",
+										"id": "8fbbdc76-4840-4c1d-a53e-84e7c6756c5a",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -818,10 +823,10 @@
 									"raw": "https://{{root_url}}/Payments/status",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"status"
 									]
@@ -842,7 +847,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "18359381-6c82-4d9c-8043-40e32ec22315",
+										"id": "2d1fe35e-3b26-46f4-a7cc-e7d3ab1c6188",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -877,10 +882,10 @@
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"executePreprocessStep"
 									]
@@ -894,7 +899,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0959f53b-7c9f-44d8-bab7-fa30b5c4e4ac",
+										"id": "2da3d41a-b7ec-48b8-b8c9-9706c9099b58",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -933,10 +938,10 @@
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"executePreprocessStep"
 									]
@@ -950,7 +955,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "834828c3-5f7e-446d-80e7-60417e6b5449",
+										"id": "99d2a319-2a3b-4e6e-8cfa-4a2e10709ec5",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -990,10 +995,10 @@
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"executePreprocessStep"
 									]
@@ -1007,7 +1012,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "78b2a07c-6ec1-49d1-b90f-1e6cf9c9a3fa",
+										"id": "28b37646-a953-41a0-962b-400064b6b41b",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1042,10 +1047,10 @@
 									"raw": "https://{{root_url}}/Payments/commission",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"commission"
 									]
@@ -1059,7 +1064,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1408ab22-31d8-48cb-a615-fadae7b0775e",
+										"id": "8a333e0d-9745-4a51-b8ac-e4ec05e7bea0",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1094,10 +1099,10 @@
 									"raw": "https://{{root_url}}/Payments/pay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"pay"
 									]
@@ -1111,7 +1116,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "74b62f57-a9fd-43af-a383-affbecb48b3d",
+										"id": "977334eb-0114-4f87-8627-45556ffa2614",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1152,10 +1157,10 @@
 									"raw": "https://{{root_url}}/Payments/pay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"pay"
 									]
@@ -1169,7 +1174,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d49f6cc3-d69e-472d-9a87-8b0400da15d0",
+										"id": "9db51afd-b084-42e0-b329-23052d24a299",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1204,10 +1209,10 @@
 									"raw": "https://{{root_url}}/Payments/status",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"status"
 									]
@@ -1228,7 +1233,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2331a33f-90b6-400e-84f4-c0d2f346e93a",
+										"id": "80e5822b-a835-4937-a13b-5449c589b72e",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1266,10 +1271,10 @@
 									"raw": "https://{{root_url}}/Payments/getPaymentInfoFromScan",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"getPaymentInfoFromScan"
 									]
@@ -1283,7 +1288,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "eeb6db8e-0241-4f6b-889f-688554cfbe6d",
+										"id": "2f152309-e008-4360-adaa-215d3d262414",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1319,10 +1324,10 @@
 									"raw": "https://{{root_url}}/Payments/commission",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"commission"
 									]
@@ -1336,7 +1341,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "64325282-ff48-4b1e-afa0-053b680c30d7",
+										"id": "c71ebaad-d902-4317-a3ad-b682b294b963",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1375,10 +1380,10 @@
 									"raw": "https://{{root_url}}/Payments/pay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"pay"
 									]
@@ -1392,7 +1397,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "eb897988-a512-4af0-a441-f40c4fe67382",
+										"id": "1606da80-1c1c-4c54-abe3-bdaa9488aa3c",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1436,10 +1441,10 @@
 									"raw": "https://{{root_url}}/Payments/pay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"pay"
 									]
@@ -1453,7 +1458,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "34cd4090-7760-4dda-97e1-c2e2cbe513c4",
+										"id": "ce6f3cd6-203d-4810-a3ad-d419da0fe104",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1488,10 +1493,10 @@
 									"raw": "https://{{root_url}}/Payments/status",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"Payments",
 										"status"
 									]
@@ -1512,7 +1517,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0b69fd2d-a57a-4837-97fe-0107a879995c",
+										"id": "3bc05512-c9cb-4272-813c-1ac8bb0a76f3",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1525,7 +1530,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "b8bda3ad-ddb5-4907-a30d-bda5e00d2319",
+										"id": "82de9548-efd4-44ef-90a0-7cab563bd863",
 										"exec": [
 											"var uuid = require('uuid');\r",
 											"var myUUID = uuid.v4();\r",
@@ -1564,10 +1569,10 @@
 									"raw": "https://{{root_url}}/MassPayments/massPay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"massPay"
 									]
@@ -1581,7 +1586,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "92eeecc2-9752-4159-b16d-e314c447a2b2",
+										"id": "b9e5dd95-be72-4df3-a348-2d20c77734f2",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1622,10 +1627,10 @@
 									"raw": "https://{{root_url}}/MassPayments/retrieveMassPay",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"retrieveMassPay"
 									]
@@ -1639,7 +1644,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f708d304-7388-4d38-a0fd-718930ad2486",
+										"id": "ed8fb73d-c49d-4a7d-b320-e67e9e8ca8ce",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1652,7 +1657,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "38416baf-c2ee-4024-9af3-0fae624187e5",
+										"id": "0d2817f1-023f-4d7e-b2c7-36ba4dd1cd62",
 										"exec": [
 											"var uuid = require('uuid');\r",
 											"var myUUID = uuid.v4();\r",
@@ -1691,10 +1696,10 @@
 									"raw": "https://{{root_url}}/MassPayments/massPayWithFile",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"massPayWithFile"
 									]
@@ -1708,7 +1713,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "603a4b37-281e-41af-bbdf-94b48e65a09b",
+										"id": "fb6a8c73-7cc9-4bcc-bd73-d3b19ae9cd5c",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1749,10 +1754,10 @@
 									"raw": "https://{{root_url}}/MassPayments/retrieveMassPayWithFile",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"retrieveMassPayWithFile"
 									]
@@ -1766,7 +1771,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7913bdb7-83a7-437f-9675-e7e3dbb07734",
+										"id": "4900e513-df8e-4551-b53c-24c5dec535e5",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1779,7 +1784,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "aa0f19e2-c7ad-453b-b365-b8d8d216a0c4",
+										"id": "a873acc3-032a-40ea-8009-4017a4e6a003",
 										"exec": [
 											"var uuid = require('uuid');\r",
 											"var myUUID = uuid.v4();\r",
@@ -1818,10 +1823,10 @@
 									"raw": "https://{{root_url}}/MassPayments/massCommission",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"massCommission"
 									]
@@ -1835,7 +1840,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a209dfd9-cdef-4195-b1df-321b02057b1d",
+										"id": "a2dbcc65-6e50-4472-a218-acdbc78fd2a7",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1848,7 +1853,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "9f651f8c-0b43-4007-b857-4a2a3dda7112",
+										"id": "330c51e0-c277-41ae-b959-0979cced74c7",
 										"exec": [
 											""
 										],
@@ -1885,10 +1890,10 @@
 									"raw": "https://{{root_url}}/MassPayments/retrieveMassCommissions",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"retrieveMassCommissions"
 									]
@@ -1902,7 +1907,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aadeafe0-f0a3-4f85-9c96-f73eb4dbf8c0",
+										"id": "8ad8d9e4-188f-4bb6-b8cf-874c0a5326a6",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1915,7 +1920,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "4a6b9865-4111-4e9d-8b00-d7de5e027a73",
+										"id": "9da00034-6edc-4c4b-9f0b-873ce34b19b8",
 										"exec": [
 											"var uuid = require('uuid');\r",
 											"var myUUID = uuid.v4();\r",
@@ -1954,10 +1959,10 @@
 									"raw": "https://{{root_url}}/MassPayments/requestIndividualPaymentsStatus",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"requestIndividualPaymentsStatus"
 									]
@@ -1971,7 +1976,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "10795e57-e704-4be7-9b44-9853d28785bb",
+										"id": "cd14ce38-3905-44ae-8819-cd23a54d4677",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -1984,7 +1989,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f369f702-208f-49be-99e3-bfc0242063f6",
+										"id": "2c13a330-34c3-457f-9606-c7b57bbc2781",
 										"exec": [
 											""
 										],
@@ -2021,10 +2026,10 @@
 									"raw": "https://{{root_url}}/MassPayments/retrieveIndividualPaymentsStatus",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"retrieveIndividualPaymentsStatus"
 									]
@@ -2038,7 +2043,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4c559a5c-aa47-4fb7-a10e-37003f61f69a",
+										"id": "8a002785-56bd-4de0-9cb4-a5af44f43517",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -2051,7 +2056,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f13672de-e9f0-4b91-a85f-d54e50f01391",
+										"id": "879621d6-7fa7-40da-aedd-0b89191765f6",
 										"exec": [
 											"var uuid = require('uuid');\r",
 											"var myUUID = uuid.v4();\r",
@@ -2090,10 +2095,10 @@
 									"raw": "https://{{root_url}}/MassPayments/requestMassPaymentsStatusWithFile",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"requestMassPaymentsStatusWithFile"
 									]
@@ -2107,7 +2112,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f2d3d2c8-0673-4cc2-9702-2c93cc3ea27f",
+										"id": "00349927-72ac-4eb8-a2b4-713c4a35036c",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -2120,7 +2125,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "69283509-b4e8-4ec9-ba6d-db534bdef659",
+										"id": "014a8889-36dd-4c86-819b-655f4ca00920",
 										"exec": [
 											""
 										],
@@ -2157,10 +2162,10 @@
 									"raw": "https://{{root_url}}/MassPayments/retrieveMassPaymentsStatusWithFile",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"retrieveMassPaymentsStatusWithFile"
 									]
@@ -2174,7 +2179,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f2a7c21b-a171-462c-8781-79f23dcb0c49",
+										"id": "ca5a170c-7f5d-4b58-a6d2-a3b8ff69d58f",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -2187,7 +2192,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "1b0a3b95-74b8-465a-bd05-02aca423997f",
+										"id": "37063ac1-294e-4994-888f-764ef0ea764a",
 										"exec": [
 											""
 										],
@@ -2224,10 +2229,10 @@
 									"raw": "https://{{root_url}}/MassPayments/generateMassPaymentsSampleFile",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"generateMassPaymentsSampleFile"
 									]
@@ -2241,7 +2246,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d5e3942d-016f-43b6-a29e-7627104c87d1",
+										"id": "87a43f5f-b9a2-4acf-8421-2f4980646391",
 										"exec": [
 											"var jsonData = JSON.parse(responseBody);",
 											"",
@@ -2254,7 +2259,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "7e3b9820-9403-426f-9a24-11f4e73fd695",
+										"id": "a3f7ac29-b7b1-480c-9f45-479c480b8e87",
 										"exec": [
 											""
 										],
@@ -2291,10 +2296,10 @@
 									"raw": "https://{{root_url}}/MassPayments/validateMassPaymentsFile",
 									"protocol": "https",
 									"host": [
-										"{{host_url}}"
+										"{{root_url}}"
 									],
 									"path": [
-										"{{portal}}",
+										
 										"MassPayments",
 										"validateMassPaymentsFile"
 									]
@@ -2312,7 +2317,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "cd93a2ff-af71-4404-a79f-f04f614d45f7",
+								"id": "d80976d6-0dda-4044-bb83-37593575f507",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2348,10 +2353,10 @@
 							"raw": "https://{{root_url}}/Payments/paymentsList",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"paymentsList"
 							]
@@ -2365,7 +2370,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "94ab7bab-508a-48e0-869a-de89159a9b23",
+								"id": "d471dc58-b059-4415-996f-639e50c1aac6",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2400,10 +2405,10 @@
 							"raw": "https://{{root_url}}/Payments/paymentsListLight",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"paymentsListLight"
 							]
@@ -2417,7 +2422,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6f4242ad-87c0-443f-a946-9f3de3b49098",
+								"id": "49cedb9c-95a2-4c60-b130-48cee2190110",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2452,10 +2457,10 @@
 							"raw": "https://{{root_url}}/Payments/paymentsCategoriesList",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"paymentsCategoriesList"
 							]
@@ -2469,7 +2474,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4b4c8c84-c453-4c86-8795-5a742fe82c76",
+								"id": "976652b9-a6d5-4d36-a4fe-4a77bfac1047",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2482,7 +2487,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6b5979ed-3137-4eb1-81d5-45768a427f52",
+								"id": "0fd489e9-44ca-49d0-b99b-d5120d0691b3",
 								"exec": [
 									"var date = (new Date()).toISOString();",
 									"",
@@ -2516,10 +2521,10 @@
 							"raw": "https://{{root_url}}/Payments/dailyTransactions",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"dailyTransactions"
 							]
@@ -2533,7 +2538,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "02eb3dbc-00d6-4056-ac45-0f633a8498d0",
+								"id": "3394a353-24bc-47a3-a0c8-446ddda795ef",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2568,10 +2573,10 @@
 							"raw": "https://{{root_url}}/Payments/lastPaymentTransactionDetails",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"lastPaymentTransactionDetails"
 							]
@@ -2585,7 +2590,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "821b1281-a07e-4d37-97ac-f2bec773e681",
+								"id": "e09c7a8d-4df7-40ab-9c62-ca5048d9bdec",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2598,7 +2603,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "ce1bbbb2-de3e-4ba2-98c7-99c75c52c296",
+								"id": "42dc412c-b2cd-4448-8573-11cafcbf4953",
 								"exec": [
 									"var date = (new Date()).toISOString();",
 									"",
@@ -2632,10 +2637,10 @@
 							"raw": "https://{{root_url}}/Payments/recentTransactions",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"recentTransactions"
 							]
@@ -2649,7 +2654,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "33abe5c1-8c72-4f9b-a91f-3fed8d714669",
+								"id": "2e25a25f-de91-44bb-95cf-a4d2fa946be1",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2662,7 +2667,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e4426a24-3c28-45be-802f-3079bc77da51",
+								"id": "829016dc-1cef-4996-9c94-94a016f3da96",
 								"exec": [
 									"var date = (new Date()).toISOString();",
 									"",
@@ -2696,10 +2701,10 @@
 							"raw": "https://{{root_url}}/Payments/topPaymentOrganizations",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"topPaymentOrganizations"
 							]
@@ -2713,7 +2718,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "397a44a5-8012-4c47-92df-4644ca7ebbba",
+								"id": "5f3ab229-f681-435f-9d68-2ef0f50c8bc1",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2748,10 +2753,10 @@
 							"raw": "https://{{root_url}}/Payments/getPaymentInfoFromScan",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"getPaymentInfoFromScan"
 							]
@@ -2765,7 +2770,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a02ed16f-b33d-4c1d-b4d5-a588068b4859",
+								"id": "32f8440c-fe3e-4642-872d-efb827706def",
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
 									"",
@@ -2800,10 +2805,10 @@
 							"raw": "https://{{root_url}}/Payments/getPaymentInfoFromRfPaymentCode",
 							"protocol": "https",
 							"host": [
-								"{{host_url}}"
+								"{{root_url}}"
 							],
 							"path": [
-								"{{portal}}",
+								
 								"Payments",
 								"getPaymentInfoFromRfPaymentCode"
 							]
@@ -2820,7 +2825,7 @@
 		"oauth2": [
 			{
 				"key": "accessToken",
-				"value": "5bc3a48eb5100b0fcd70ff42f9d8918171a2d611aaa80711a4376e9a79b295f1",
+				"value": "c663de7f569fd909bd72846bc99e0982d5464b611149b66b738f938fd3a57775",
 				"type": "string"
 			},
 			{
@@ -2839,7 +2844,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8885cfd4-0859-47bc-8fae-d88ce48fc9e0",
+				"id": "23e01d7d-71b2-4df2-a1d0-f60a620a78c6",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2849,7 +2854,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "6eeaf83f-4d5f-425d-a3ce-5064ac88b152",
+				"id": "2358a469-a6df-4671-942d-2c32db53b402",
 				"type": "text/javascript",
 				"exec": [
 					""

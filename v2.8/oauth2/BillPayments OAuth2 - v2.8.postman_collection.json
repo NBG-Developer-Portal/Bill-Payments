@@ -42,7 +42,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sandboxId\": \"{{sandbox_id}}\"\r\n}"
+							"raw": "{\r\n  \"sandboxId\": \"{{sandbox_id}}\"\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox",
@@ -174,7 +177,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}",
@@ -245,7 +251,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"userName\": \"ibank_user4\",\r\n  \"userType\": \"IBANK_USER\",\r\n  \"networkId\": \"7fa7e3e0-77d1-4587-b04e-7e8793c0263e\",\r\n  \"spotMachineType\": \"TransactionTerminal\"\r\n}"
+							"raw": "{\r\n  \"userName\": \"ibank_user4\",\r\n  \"userType\": \"IBANK_USER\",\r\n  \"networkId\": \"7fa7e3e0-77d1-4587-b04e-7e8793c0263e\",\r\n  \"spotMachineType\": \"TransactionTerminal\"\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users",
@@ -341,7 +350,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"balance\": 100000,\r\n  \"accountType\": \"IBAN\",\r\n  \"accountTypeValue\": \"GR7816570557954999\"\r\n}"
+							"raw": "{\r\n  \"balance\": 100000,\r\n  \"accountType\": \"IBAN\",\r\n  \"accountTypeValue\": \"GR7816570557954999\"\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts",
@@ -391,7 +403,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"balance\": 100001\r\n}"
+							"raw": "{\r\n  \"balance\": 100001\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts/{{UserTestAccountID}}",
@@ -427,7 +442,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/users/{{user_id}}/accounts/{{UserTestAccountID}}",
@@ -467,7 +485,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"paymentIdentification\": {\r\n            \"instrId\": \"6281d798-2c32-4c27-aa80-91a726afa587\",\r\n            \"endToEndId\": \"479177344326\",\r\n            \"txId\": \"6281d798-2c32-4c27-aa80-91a726afa587\",\r\n            \"clrSysRef\": \"90773700112820186243\",\r\n            \"paymentRef\": null\r\n\t},\r\n\t\"debtorName\": \"{{User1Fullname}}\",\r\n\t\"debtorTelephone\": \"{{User1Telephone}}\",\r\n\t\"debitAccount\": \"GR8979540708770489\",\r\n\t\"creditorBankBIC\": \"ETHNGRAA\",\r\n    \"creditorBankName\": \"NATIONAL BANK OF GREECE\",\r\n    \"creditorBankIBAN\": \"GR55426546817137133871\",\r\n\t\"branch\": \"700\",\r\n\t\"subBranch\": \"3\",\r\n\t\"sendCutOffTime\": \"2018-11-28T08:00:00.000Z\",\r\n\t\"status\": \"COMPLETED\",\r\n\t\"failureReason\": null,\r\n\t\"timestamp\": \"2018-11-28T08:47:55.804Z\",\r\n\t\"commNBG\": 0,\r\n    \"commUltimateDebtor\": 0,\r\n    \"commThirdParty\": 5,\r\n    \"commOther\": 0,\r\n\t\"commSubAgent\": 0\r\n}"
+							"raw": "{\r\n\t\"paymentIdentification\": {\r\n            \"instrId\": \"6281d798-2c32-4c27-aa80-91a726afa587\",\r\n            \"endToEndId\": \"479177344326\",\r\n            \"txId\": \"6281d798-2c32-4c27-aa80-91a726afa587\",\r\n            \"clrSysRef\": \"90773700112820186243\",\r\n            \"paymentRef\": null\r\n\t},\r\n\t\"debtorName\": \"{{User1Fullname}}\",\r\n\t\"debtorTelephone\": \"{{User1Telephone}}\",\r\n\t\"debitAccount\": \"GR8979540708770489\",\r\n\t\"creditorBankBIC\": \"ETHNGRAA\",\r\n    \"creditorBankName\": \"NATIONAL BANK OF GREECE\",\r\n    \"creditorBankIBAN\": \"GR55426546817137133871\",\r\n\t\"branch\": \"700\",\r\n\t\"subBranch\": \"3\",\r\n\t\"sendCutOffTime\": \"2018-11-28T08:00:00.000Z\",\r\n\t\"status\": \"COMPLETED\",\r\n\t\"failureReason\": null,\r\n\t\"timestamp\": \"2018-11-28T08:47:55.804Z\",\r\n\t\"commNBG\": 0,\r\n    \"commUltimateDebtor\": 0,\r\n    \"commThirdParty\": 5,\r\n    \"commOther\": 0,\r\n\t\"commSubAgent\": 0\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/sandbox/{{sandbox_id}}/transactions",
@@ -531,7 +552,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -599,7 +623,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -660,7 +687,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -711,7 +741,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"cancelPaymentIdentification\": {\r\n     \"instrId\": \"{{instrId}}\",\r\n     \"endtoendId\": \"{{endtoendId}}\",\r\n     \"txId\": \"{{instrId}}\",\r\n     \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"paymentRequest\": null,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\"    \r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"cancelPaymentIdentification\": {\r\n     \"instrId\": \"{{instrId}}\",\r\n     \"endtoendId\": \"{{endtoendId}}\",\r\n     \"txId\": \"{{instrId}}\",\r\n     \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"paymentRequest\": null,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\"    \r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/cancelPayment",
@@ -762,7 +795,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"cancelPaymentIdentification\": {\r\n     \"instrId\": \"{{instrId}}\",\r\n     \"endtoendId\": \"{{endtoendId}}\",\r\n     \"txId\": \"{{instrId}}\",\r\n     \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"paymentRequest\": null,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\"   \r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"cancelPaymentIdentification\": {\r\n     \"instrId\": \"{{instrId}}\",\r\n     \"endtoendId\": \"{{endtoendId}}\",\r\n     \"txId\": \"{{instrId}}\",\r\n     \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"paymentRequest\": null,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\"   \r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/cancelPayment",
@@ -814,7 +850,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/status",
@@ -872,7 +911,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{EPARAVOLO_RETRIEVE_ALL_TYPES}}\",\r\n      \"input\": { \r\n\t\t\t\"languageId\" : \"el\"\r\n\t\t}\r\n    }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{EPARAVOLO_RETRIEVE_ALL_TYPES}}\",\r\n      \"input\": { \r\n\t\t\t\"languageId\" : \"el\"\r\n\t\t}\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
@@ -927,7 +969,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{EPARAVOLO_GET_USER}}\",\r\n      \"input\": { \r\n\t\t\t\"languageId\" : \"el\",\r\n\t\t\t\"taxId\": \"139181071\"\r\n\t\t}\r\n    }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{EPARAVOLO_GET_USER}}\",\r\n      \"input\": { \r\n\t\t\t\"languageId\" : \"el\",\r\n\t\t\t\"taxId\": \"139181071\"\r\n\t\t}\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
@@ -983,7 +1028,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{EPARAVOLO_CREATE_SHORT}}\",\r\n      \"input\": { \r\n\t\t\t\"languageId\": \"el\",\r\n\t\t\t\"taxId\": \"139181071\",\r\n\t\t\t\"typeCode\": \"7432\",\r\n\t\t\t\"amount\": 9,\r\n\t\t\t\"firstName\": \"{{EPARAVOLO_GET_USER_FIRSTNAME}}\",\r\n\t\t\t\"lastName\": \"{{EPARAVOLO_GET_USER_LASTNAME}}\",\r\n\t\t\t\"fatherName\": \"{{EPARAVOLO_GET_USER_FATHERNAME}}\"\r\n\t\t}\r\n    }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{EPARAVOLO_CREATE_SHORT}}\",\r\n      \"input\": { \r\n\t\t\t\"languageId\": \"el\",\r\n\t\t\t\"taxId\": \"139181071\",\r\n\t\t\t\"typeCode\": \"7432\",\r\n\t\t\t\"amount\": 9,\r\n\t\t\t\"firstName\": \"{{EPARAVOLO_GET_USER_FIRSTNAME}}\",\r\n\t\t\t\"lastName\": \"{{EPARAVOLO_GET_USER_LASTNAME}}\",\r\n\t\t\t\"fatherName\": \"{{EPARAVOLO_GET_USER_FATHERNAME}}\"\r\n\t\t}\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
@@ -1034,7 +1082,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -1097,7 +1148,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1154,7 +1208,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1205,7 +1262,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n    \t \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n    \t \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/status",
@@ -1267,7 +1327,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{CAR_TAX_RETRIEVE_PAYMENT_CODE}}\",\r\n      \"input\": { \r\n\t\t\t\"taxId\" : \"145895998\",\r\n\t\t\t\"licensePlate\" : \"IZH5445\",\r\n\t\t\t\"year\" : \"2020\",\r\n\t\t\t\"isCaravan\": \"0\"\r\n\t\t}\r\n    }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{CAR_TAX_RETRIEVE_PAYMENT_CODE}}\",\r\n      \"input\": { \r\n\t\t\t\"taxId\" : \"145895998\",\r\n\t\t\t\"licensePlate\" : \"IZH5445\",\r\n\t\t\t\"year\" : \"2020\",\r\n\t\t\t\"isCaravan\": \"0\"\r\n\t\t}\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",
@@ -1319,7 +1382,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -1384,7 +1450,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1440,7 +1509,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1491,7 +1563,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n    \t \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{txId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n    \t \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{txId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/status",
@@ -1629,7 +1704,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -1696,7 +1774,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n     \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1756,7 +1837,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\"\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1807,7 +1891,316 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/status",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "(Needs SMS OTP) Execute Barcode Payment CarTax (ACCOUNT)",
+					"item": [
+						{
+							"name": "Get Car Tax PaymentCode From Barcode",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "52442ab4-cb85-4766-b4fa-dfe4f0dd00e3",
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											"",
+											"postman.setEnvironmentVariable(\"paymentCodeCarTax\", jsonData.payload.paymentCode);",
+											"postman.setEnvironmentVariable(\"AmountCarTax\", jsonData.payload.amount);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": {{BarcodeCarTax}}\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/getPaymentInfoFromScan",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"getPaymentInfoFromScan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Car Tax Commissions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c6b220e7-0644-4beb-8eee-68094fa5d9fe",
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/commission",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"commission"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pay Car Tax Step 1 ( With smsotp )",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4965018e-4cad-4e28-bb54-5de6c131ac2b",
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload === null;",
+											"tests[\"exception is empty\"] = jsonData.exception !== null;"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "0253f02b-002b-4563-8e10-c85b389bc3cb",
+										"exec": [
+											"var uuid = require('uuid');\r",
+											"var myUUID = uuid.v4();\r",
+											"pm.environment.set(\"instrId\", myUUID);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/pay",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pay Car Tax Step 2 ( With I-CODE)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5322c05a-2cac-4d18-9692-8a59bbeb630f",
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											"",
+											"postman.setEnvironmentVariable(\"instrId\", jsonData.payload.paymentIdentification.instrId);",
+											"postman.setEnvironmentVariable(\"endtoendId\", jsonData.payload.paymentIdentification.endtoendId);",
+											"postman.setEnvironmentVariable(\"txId\", jsonData.payload.paymentIdentification.txId);",
+											"postman.setEnvironmentVariable(\"clrSysRef\", jsonData.payload.paymentIdentification.clrSysRef);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/pay",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payment Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "96657a4b-71a6-4864-93f4-698eb406f0e6",
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/status",
@@ -2650,7 +3043,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": \"DemoTPP4UsersSpotMachine1\",\r\n    \"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": \"DemoTPP4UsersSpotMachine1\",\r\n    \"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/paymentsList",
@@ -2701,7 +3097,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": \"DemoTPP4UsersSpotMachine1\",\r\n    \"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": \"DemoTPP4UsersSpotMachine1\",\r\n    \"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/paymentsListLight",
@@ -2752,7 +3151,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": \"DemoTPP4UsersSpotMachine1\",\r\n    \"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": \"DemoTPP4UsersSpotMachine1\",\r\n    \"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/paymentsCategoriesList",
@@ -2815,7 +3217,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"transactionDate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"transactionDate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/dailyTransactions",
@@ -2866,7 +3271,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n  \t\"paymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{txId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n  \t\"paymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{txId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/lastPaymentTransactionDetails",
@@ -2929,7 +3337,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"startdate\": \"{{CURRENT_DATE}}\",\r\n    \"enddate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"startdate\": \"{{CURRENT_DATE}}\",\r\n    \"enddate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/recentTransactions",
@@ -2992,7 +3403,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"startdate\": \"{{CURRENT_DATE}}\",\r\n    \"enddate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"startdate\": \"{{CURRENT_DATE}}\",\r\n    \"enddate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/topPaymentOrganizations",
@@ -3043,7 +3457,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDoy}}\",\r\n      \"barcode\": {{BarcodeDoy}}\r\n    }\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDoy}}\",\r\n      \"barcode\": {{BarcodeDoy}}\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/getPaymentInfoFromScan",
@@ -3094,7 +3511,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentCode\": \"{{RF_PaymentCode}}\"\r\n  }\r\n}"
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentCode\": \"{{RF_PaymentCode}}\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "https://{{root_url}}/Payments/getPaymentInfoFromRfPaymentCode",

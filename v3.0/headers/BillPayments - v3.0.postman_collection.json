@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ebb68c97-2c5b-46a1-981d-8401e096774f",
+		"_postman_id": "07090243-962e-42f6-b9c3-4ff8de70ac3f",
 		"name": "BillPayments - v3.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -697,6 +697,463 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/pay",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payment Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{txId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/status",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Payment DEH Step 1 ( With smsotp )",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									},
+									{
+										"key": "phone_number",
+										"value": "{{phone_number}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"cancelPaymentIdentification\": {\r\n     \"instrId\": \"{{instrId}}\",\r\n     \"endtoendId\": \"{{endtoendId}}\",\r\n     \"txId\": \"{{instrId}}\",\r\n     \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"paymentRequest\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/cancelPayment",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"cancelPayment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Payment DEH Step 2 ( With I-CODE )",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									},
+									{
+										"key": "phone_number",
+										"value": "{{phone_number}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"cancelPaymentIdentification\": {\r\n     \"instrId\": \"{{instrId}}\",\r\n     \"endtoendId\": \"{{endtoendId}}\",\r\n     \"txId\": \"{{instrId}}\",\r\n     \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"paymentRequest\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/cancelPayment",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"cancelPayment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "(Needs SMS OTP) Execute Payment DEH (LNEXTACCOUNT)",
+					"item": [
+						{
+							"name": "Get DEH Commissions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/commission",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"commission"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pay DEH Step 1 ( With smsotp )",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var uuid = require('uuid');\r",
+											"var myUUID = uuid.v4();\r",
+											"pm.environment.set(\"instrId\", myUUID);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									},
+									{
+										"key": "phone_number",
+										"value": "{{phone_number}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/pay",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pay DEH Step 2 ( With I-CODE)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											"",
+											"postman.setEnvironmentVariable(\"instrId\", jsonData.payload.paymentIdentification.instrId);",
+											"postman.setEnvironmentVariable(\"endtoendId\", jsonData.payload.paymentIdentification.endtoendId);",
+											"postman.setEnvironmentVariable(\"txId\", jsonData.payload.paymentIdentification.txId);",
+											"postman.setEnvironmentVariable(\"clrSysRef\", jsonData.payload.paymentIdentification.clrSysRef);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"machineId\": null\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -3874,6 +4331,87 @@
 							"path": [
 								"Payments",
 								"dailyTransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Daily Transactions (Light)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"tests[\"payload not empty\"] = jsonData.payload !== null;",
+									"tests[\"exception is empty\"] = jsonData.exception === null;"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var date = (new Date()).toISOString();",
+									"",
+									"postman.setEnvironmentVariable('CURRENT_DATE', date.substring(0, 10));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{content-type}}"
+							},
+							{
+								"key": "Client-Id",
+								"value": "{{client_id}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"transactionDate\": \"{{CURRENT_DATE}}\",\r\n    \"requestMachineId\": null,\r\n\t\"machineId\": null\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{root_url}}/Payments/dailyTransactionsLight",
+							"protocol": "https",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"Payments",
+								"dailyTransactionsLight"
 							]
 						}
 					},

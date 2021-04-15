@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "07090243-962e-42f6-b9c3-4ff8de70ac3f",
+		"_postman_id": "f2f1dc5b-1ab3-4413-83b8-b00fd31add36",
 		"name": "BillPayments - v3.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1986,7 +1986,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{CAR_TAX_RETRIEVE_PAYMENT_CODE}}\",\r\n      \"input\": { \r\n\t\t\t\"taxId\" : \"145895998\",\r\n\t\t\t\"licensePlate\" : \"IZH5445\",\r\n\t\t\t\"year\" : \"2020\",\r\n\t\t\t\"isCaravan\": \"0\"\r\n\t\t}\r\n    }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"paymentCode\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n    \"preprocessStepDetails\": {\r\n      \"stepId\": \"{{CAR_TAX_RETRIEVE_PAYMENT_CODE}}\",\r\n      \"input\": { \r\n\t\t\t\"taxId\" : \"145895998\",\r\n\t\t\t\"licensePlate\" : \"IZH5445\",\r\n\t\t\t\"year\" : \"2021\",\r\n\t\t\t\"isCaravan\": \"0\",\r\n            \"months\": \"4\"\r\n\t\t}\r\n    }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/executePreprocessStep",

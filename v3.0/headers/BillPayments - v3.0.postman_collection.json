@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "086215f8-3ccd-4a43-9d76-c2d28c4c619c",
+		"_postman_id": "b9be37b5-17b8-411f-8c4e-a16770a4c583",
 		"name": "BillPayments - v3.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -4994,6 +4994,76 @@
 							"path": [
 								"Payments",
 								"paymentsCategoriesList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checks If Transaction Was Done In TPP Channel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"tests[\"payload not empty\"] = jsonData.payload !== null;",
+									"tests[\"exception is empty\"] = jsonData.exception === null;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{content-type}}"
+							},
+							{
+								"key": "Client-Id",
+								"value": "{{client_id}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n        \"userId\": \"{{user_id}}\",\r\n        \"requestMachineId\": null,\r\n        \"machineId\": null,\r\n        \"paymentIdentification\": {\r\n            \"instrId\": \"{{instrId}}\",\r\n            \"txId\": \"{{txId}}\",\r\n            \"clrSysRef\": \"{{clrSysRef}}\"\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{root_url}}/OmniPayments/isTppPayment",
+							"protocol": "https",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"OmniPayments",
+								"isTppPayment"
 							]
 						}
 					},

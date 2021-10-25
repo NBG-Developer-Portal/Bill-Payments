@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "79ad22ea-3a61-4d75-a819-e41093c2d97a",
+		"_postman_id": "53e20034-b621-4cd5-9f88-f2fb049944c2",
 		"name": "BillPayments OAuth2 - v3.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -521,7 +521,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -587,7 +587,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -855,7 +855,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -921,7 +921,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -981,7 +981,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"LNEXACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1346,7 +1346,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -1407,7 +1407,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"Έκδοση & Πληρωμή e-παραβόλου\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"Έκδοση & Πληρωμή e-παραβόλου\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1463,7 +1463,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"Έκδοση & Πληρωμή e-παραβόλου\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdEParavolo}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{PAYMENT_CODE}}\",\r\n\t\t\"DEBTOR_TAX_ID\" : \"{{DEBTOR_TAX_ID}}\",\r\n\t\t\"AUX_PAYMENT_CODE\" : \"{{AUX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{EPARAVOLO_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"Έκδοση & Πληρωμή e-παραβόλου\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1623,7 +1623,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\"\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -1686,7 +1686,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1741,7 +1741,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n\t\t\"PAYMENT_CODE\":\"{{CAR_TAX_PAYMENT_CODE}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": \"{{CAR_TAX_AMOUNT}}\",\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -1920,7 +1920,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -1985,7 +1985,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"smsotp\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -2044,7 +2044,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountDei}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"isSmsOtp\": true,\r\n\t\"tanNumber\": \"{{I-CODE}}\",\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΔΕΗ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -2203,7 +2203,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": true,\r\n    \"machineId\": null\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/commission",
@@ -2268,7 +2268,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"machineId\": null,\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"smsotp\",\r\n    \"machineId\": null,\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -2327,7 +2327,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"ibUserId\": \"{{user_id}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"machineId\": null,\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdCarTax}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeCarTax}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": {{AmountCarTax}},\r\n      \"method\": \"ACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": \"{{User1AccountIBAN}}\",\r\n        \"pan\": null\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"isSmsOtp\": true,\r\n    \"tanNumber\": \"{{I-CODE}}\",\r\n    \"machineId\": null,\r\n    \"allowDuplicate\": null,\r\n    \"comments\": \"comments\",\r\n    \"deferred\": {\r\n        \"isDeferred\": false,\r\n        \"deferredDate\": null,\r\n        \"deferredName\": \"ΤΕΛΗ ΚΥΚΛΟΦΟΡΊΑΣ ΑΥΤΟΚΙΝΉΤΩΝ ΚΑΙ ΜΟΤΟΣΥΚΛΕΤΏΝ\",\r\n        \"deferredFrequency\": null,\r\n        \"deferredTotalPayments\": null\r\n      }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/pay",
@@ -2378,6 +2378,191 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    },\r\n    \"UltimateDebtor\": {\r\n      \"name\": \"string\",\r\n      \"customerNumber\": \"string\"\r\n    },\r\n    \"acceptDuplicate\": true,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/status",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Execute Payment DEH (CARDACCT-eCommerce)",
+					"item": [
+						{
+							"name": "Get DEH Commissions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{$guid}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{$guid}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"CARDACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": null,\r\n        \"pan\": \"5369854785482100\"\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"acceptDuplicate\": false,\r\n    \"machineId\": null\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/commission",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"commission"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pay DEH",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;",
+											"",
+											"postman.setEnvironmentVariable(\"instrId\", jsonData.payload.paymentIdentification.instrId);",
+											"postman.setEnvironmentVariable(\"endtoendId\", jsonData.payload.paymentIdentification.endtoendId);",
+											"postman.setEnvironmentVariable(\"txId\", jsonData.payload.paymentIdentification.txId);",
+											"postman.setEnvironmentVariable(\"clrSysRef\", jsonData.payload.paymentIdentification.clrSysRef);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"function guid() {\r",
+											"    function _p8(s) {\r",
+											"        var p = (Math.random().toString(16)+\"000000000\").substr(2,8);\r",
+											"        return s ? \"-\" + p.substr(0,4) + \"-\" + p.substr(4,4) : p ;\r",
+											"    }\r",
+											"    return _p8() + _p8(true) + _p8(true) + _p8();\r",
+											"}\r",
+											"\r",
+											"postman.setEnvironmentVariable(\"instrId\",guid());"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"paymentIdentification\": {\r\n      \"instrId\": \"{{instrId}}\",\r\n      \"endtoendId\": null,\r\n      \"txId\": \"{{instrId}}\",\r\n      \"clrSysRef\": null\r\n    },\r\n    \"paymentOrgIdentification\": {\r\n      \"id\": \"{{paymentOrgIdentificationIdDei}}\",\r\n      \"barcode\": null,\r\n      \"fields\": {\r\n      \t\"PAYMENT_CODE\" : \"{{paymentCodeDei}}\"\r\n      },\r\n      \"extraData\": {}\r\n    },\r\n    \"chargesInfo\": null,\r\n    \"settlementInfo\": {\r\n      \"ccy\": \"EUR\",\r\n      \"amount\": 21.21,\r\n      \"method\": \"CARDACCT\"\r\n    },\r\n    \"debtor\": {\r\n      \"name\": \"{{User1Fullname}}\",\r\n      \"debtorAccount\": {\r\n        \"iban\": null,\r\n        \"pan\": \"5369854785482100\"\r\n      },\r\n      \"telephone\": \"{{User1Telephone}}\"\r\n    },\r\n    \"ultimateDebtor\":  null,\r\n    \"remittanceInfo\": null,\r\n    \"requestMachineId\": null,\r\n    \"machineId\": null,\r\n    \"allowDuplicate\": false,\r\n    \"comments\": \"comments\"\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{root_url}}/Payments/pay",
+									"protocol": "https",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"Payments",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payment Status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"",
+											"tests[\"payload not empty\"] = jsonData.payload !== null;",
+											"tests[\"exception is empty\"] = jsonData.exception === null;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{content-type}}"
+									},
+									{
+										"key": "Client-Id",
+										"value": "{{client_id}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"header\": {\r\n    \"ID\": \"{{$guid}}\",\r\n    \"application\": \"{{application_id}}\",\r\n    \"bank\": \"{{bank}}\",\r\n    \"hostSession\": null,\r\n    \"channel\": \"{{channel}}\",\r\n    \"customer\": 0,\r\n    \"logitude\": 0,\r\n    \"latitude\": 0,\r\n    \"go4moreMember\": {{go4moreMember}},\r\n    \"TAN\": null\r\n  },\r\n  \"payload\": {\r\n    \"userId\": \"{{user_id}}\",\r\n    \"PaymentIdentification\": {\r\n         \"instrId\": \"{{instrId}}\",\r\n         \"endtoendId\": \"{{endtoendId}}\",\r\n         \"txId\": \"{{instrId}}\",\r\n         \"clrSysRef\": \"{{clrSysRef}}\"\r\n    }\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{root_url}}/Payments/status",
